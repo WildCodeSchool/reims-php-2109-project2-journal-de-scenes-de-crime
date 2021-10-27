@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class CrimeScene extends AbstractController
+class CrimeSceneController extends AbstractController
 {
 
 }

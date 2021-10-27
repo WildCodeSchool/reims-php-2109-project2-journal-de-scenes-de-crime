@@ -45,7 +45,7 @@ CREATE TABLE `crime_scene` (
   `adress` varchar(150) NOT NULL,
   `description` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `victime` varchar(150) NOT NULL 
+  `victim` varchar(150) NOT NULL 
 );
 
 --

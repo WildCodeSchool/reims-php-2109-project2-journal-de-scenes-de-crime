@@ -38,7 +38,8 @@ class CrimeSceneManager extends AbstractManager
          */
     public function update(array $crimeScene)
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title, description` = :title, :description, WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
+        " SET `title, description` = :title, :description, WHERE id=:id");
         $statement->bindValue('id', $crimeScene['id'], \PDO::PARAM_INT);
         $statement->bindValue('title', $crimeScene['title'], \PDO::PARAM_STR);
         $statement->bindValue('description', $crimeScene['description'], \PDO::PARAM_STR);
@@ -49,7 +50,7 @@ class CrimeSceneManager extends AbstractManager
         * Delete row form an ID
         */
     public function delete(int $id): void
-    {    
+    {
         $statement = $this->pdo->prepare("DELETE FROM " . static::TABLE . " WHERE id=:id");
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();

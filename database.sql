@@ -68,3 +68,11 @@ CREATE TABLE `comment` (
   `message` varchar(255) NOT NULL,
   `date` date NOT NULL
 );
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL
+);

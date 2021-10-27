@@ -49,7 +49,11 @@ CREATE TABLE `crime_scene` (
 );
 
 --
--- Contenu de la table `item`
+-- Structure de la table `keys`
 --
 
-
+CREATE TABLE `keys` (
+  `id` INT PRIMARY KEY NOT NULL,
+  `keynumber` varchar(50),
+  `keyword` varchar(50)
+);

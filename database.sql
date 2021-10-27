@@ -23,41 +23,56 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `item`
+-- Création de la BDD "sherlock"
 --
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE DATABASE sherlock; 
 
 --
--- Contenu de la table `item`
+-- Selection de la BDD "sherlock"
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+USE sherlock; 
 
 --
--- Index pour les tables exportées
+-- Structure de la table `crime_scene`
 --
 
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+CREATE TABLE `crime_scene` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `adress` varchar(150) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `victim` varchar(150) NOT NULL 
+);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- Structure de la table `hashtag`
 --
 
+CREATE TABLE `hashtag` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `keynumber` varchar(50),
+  `keyword` varchar(50)
+);
+
 --
--- AUTO_INCREMENT pour la table `item`
+-- Structure de la table `comment`
 --
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `comment` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `date` date NOT NULL
+);
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL
+);

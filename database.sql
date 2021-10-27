@@ -39,7 +39,7 @@ USE sherlock;
 --
 
 CREATE TABLE `crime_scene` (
-  `id` INT PRIMARY KEY NOT NULL,
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `adress` varchar(150) NOT NULL,
@@ -49,11 +49,22 @@ CREATE TABLE `crime_scene` (
 );
 
 --
--- Structure de la table `keys`
+-- Structure de la table `hashtag`
 --
 
-CREATE TABLE `keys` (
-  `id` INT PRIMARY KEY NOT NULL,
+CREATE TABLE `hashtag` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `keynumber` varchar(50),
   `keyword` varchar(50)
+);
+
+--
+-- Structure de la table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `date` date NOT NULL
 );

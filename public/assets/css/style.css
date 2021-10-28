@@ -1,7 +1,41 @@
 /*---------------------------Mobile version------------------------------*/
+@font-face {
+        font-family: amsterdam-four-ttf;
+        src: url('../font/amsterdam-four-ttf.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+
+        font-family: Waschkueche;
+        src: url('../font/Waschkueche.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+
+        font-family: AmericanTypewriter;
+        src: url('../font/AmericanTypewriter.ttc') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+body {
+        background-color: #FFFAE8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
 
 #searchBar { 
-        align-items: center;
         border-radius: 10px;
+
+}
+
+.header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #A5593C;
+        font-family: "Waschkueche";
+}
+.logo {
+        margin-top: 24px;
+        width: 30%;
 
 }

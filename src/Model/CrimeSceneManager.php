@@ -13,7 +13,7 @@ class CrimeSceneManager extends AbstractManager
     {
         $statement = $this->pdo->prepare("SELECT name, title, adress, description, date, victim 
         FROM crime_scene");
-
+        $statement->execute();
         return $statement->fetch();
     }
         /**
@@ -22,8 +22,9 @@ class CrimeSceneManager extends AbstractManager
     public function showTitle()
     {
         $statement = $this->pdo->prepare("SELECT title FROM crime_scene");
-
+        $statement->execute();
         return $statement->fetch();
+        
     }
         /**
          * Insert new crime scene in database

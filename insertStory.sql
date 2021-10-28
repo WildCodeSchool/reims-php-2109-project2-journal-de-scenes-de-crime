@@ -1,3 +1,4 @@
+ALTER TABLE `crime_scene` CHANGE description description TEXT;
 INSERT INTO `crime_scene` (
   `name`,
   `title`,
@@ -11,5 +12,5 @@ INSERT INTO `crime_scene` (
   `3, Lauriston Gardens, Londre`,
   `C’était le cadavre d’un homme d’environ quarante-trois, de taille moyenne, large d’épaules, avec des cheveux noirs et une barbe de trois jours. Ses mains étaient crispées et ses bras étendus. L’agonie avait dû être douloureuse ! Son visage rigide conservait une expression d’horreur.`,
   `name`,
-  `le cadavre d’Enoch J. Drebber`,
+  `le cadavre d’Enoch J. Drebber`
 );

@@ -24,7 +24,6 @@ class CrimeSceneManager extends AbstractManager
         $statement = $this->pdo->prepare("SELECT title FROM crime_scene");
         $statement->execute();
         return $statement->fetch();
-        
     }
         /**
          * Insert new crime scene in database

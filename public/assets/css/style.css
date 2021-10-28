@@ -1,7 +1,28 @@
 /*---------------------------Mobile version------------------------------*/
+@font-face {
+        font-family: amsterdam-four-ttf;
+        src: url('../font/amsterdam-four-ttf.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+
+        font-family: Waschkueche;
+        src: url('../font/Waschkueche.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+
+        font-family: AmericanTypewriter;
+        src: url('../font/AmericanTypewriter.ttc') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
 
 #searchBar { 
         align-items: center;
         border-radius: 10px;
 
+}
+
+.header {
+        color: violet;
+        font-family: "Waschkueche";
 }

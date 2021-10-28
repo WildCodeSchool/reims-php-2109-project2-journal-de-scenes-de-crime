@@ -1,4 +1,4 @@
-/*---------------------------Mobile version------------------------------*/
+/*---------------------------Mobile First------------------------------*/
 @font-face {
         font-family: amsterdam-four-ttf;
         src: url('../font/amsterdam-four-ttf.ttf') format('truetype');
@@ -15,27 +15,103 @@
         font-weight: normal;
         font-style: normal;
 }
+
+:root {
+        --main-color: #FFFAE8;
+        --secondary-color: #A5593C;
+        --third-color: #FFF; 
+        --light: rgba(250, 245, 242, 0.938);
+        --dark: #14030d;
+        --text-font-size: 0.6rem;
+        --h1-size: 4rem;
+        --h1-font: Waschkueche;
+        --h2-font: amsterdam-four-ttf;
+        --text-font: AmericanTypewriter;
+}
+
 body {
-        background-color: #FFFAE8;
+        background-color: var(--main-color);
         display: flex;
         flex-direction: column;
         align-items: center;
 }
 
-#searchBar { 
-        border-radius: 10px;
-
-}
-
+/* *************** HEADER *************** */
 .header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #A5593C;
-        font-family: "Waschkueche";
+        color: var(--secondary-color);
+        font-family: var(--h1-font);
 }
 .logo {
         margin-top: 24px;
         width: 30%;
 
 }
+        
+
+/* *************** NAVBAR *************** */
+
+#searchBar { 
+        border-radius: 10px;
+
+}
+
+/* *************** SECTION HASTAG *************** */
+/* *************** SECTION LIST TITLE *************** */
+/* *************** SECTION CREATE CRIME *************** */
+
+
+
+/* X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up)  */
+
+@media (min-width: 576px) {
+        /* *************** HEADER *************** */
+        /* *************** NAVBAR *************** */
+        /* *************** SECTION HASTAG *************** */
+        /* *************** SECTION LIST TITLE *************** */
+        /* *************** SECTION CREATE CRIME *************** */
+    }
+    
+    /* Medium devices (tablets, 768px and up) */
+    
+    @media (min-width: 768px) {
+         /* *************** HEADER *************** */
+        /* *************** NAVBAR *************** */
+        /* *************** SECTION HASTAG *************** */
+        /* *************** SECTION LIST TITLE *************** */
+        /* *************** SECTION CREATE CRIME *************** */
+    }
+    
+    /* Large devices (desktops, 992px and up) */
+    
+    @media (min-width: 992px) {
+         /* *************** HEADER *************** */
+        /* *************** NAVBAR *************** */
+        /* *************** SECTION HASTAG *************** */
+        /* *************** SECTION LIST TITLE *************** */
+        /* *************** SECTION CREATE CRIME *************** */
+    }
+    
+    /* X-Large devices (large desktops, 1200px and up) */
+    
+    @media (min-width: 1200px) {
+        /* *************** HEADER *************** */
+        /* *************** NAVBAR *************** */
+        /* *************** SECTION LIST TITLE *************** */
+        /* *************** SECTION CREATE CRIME *************** */
+        /* *************** SECTION HASTAG *************** */
+    }
+    /* XX-Large devices (larger desktops, 1400px and up) */
+    
+    @media (min-width: 1400px) {
+         /* *************** HEADER *************** */
+        /* *************** NAVBAR *************** */
+        /* *************** SECTION HASTAG *************** */
+        /* *************** SECTION LIST TITLE *************** */
+        /* *************** SECTION CREATE CRIME *************** */
+    }

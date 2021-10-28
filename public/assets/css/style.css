@@ -15,14 +15,27 @@
         font-weight: normal;
         font-style: normal;
 }
+body {
+        background-color: #FFFAE8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
 
 #searchBar { 
-        align-items: center;
         border-radius: 10px;
 
 }
 
 .header {
-        color: violet;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #A5593C;
         font-family: "Waschkueche";
+}
+.logo {
+        margin-top: 24px;
+        width: 30%;
+
 }

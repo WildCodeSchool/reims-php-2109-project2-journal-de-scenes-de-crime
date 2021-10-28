@@ -9,7 +9,6 @@ class CrimeSceneManager extends AbstractManager
         /**
         * Show crime scene in database
         */
-    
     public function show()
     {
         $statement = $this->pdo->prepare("SELECT name, title, adress, description, date, victim 

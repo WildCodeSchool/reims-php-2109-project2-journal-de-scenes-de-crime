@@ -23,7 +23,7 @@
         --light: rgba(250, 245, 242, 0.938);
         --dark: #14030d;
         --text-font-size: 0.6rem;
-        --h1-size: 4rem;
+        --h1-size: 1rem;
         --h1-font: Waschkueche;
         --h2-font: amsterdam-four-ttf;
         --text-font: AmericanTypewriter;
@@ -33,7 +33,12 @@ body {
         background-color: var(--main-color);
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+}
+
+h1 {
+     font-family: var(--h1-font);
+     font-size: var(--h1-size);   
 }
 
 /* *************** HEADER *************** */
@@ -44,26 +49,99 @@ body {
         color: var(--secondary-color);
         font-family: var(--h1-font);
 }
+
 .logo {
         margin-top: 5rem;
         width: 30%;
-
 }
         
 
 /* *************** NAVBAR *************** */
 
-#searchBar { 
-        border-radius: 10px;
+.navbar { 
+        width: 75%;
+        margin: auto;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+}
 
+.styleNav {
+        display: flex;
+        flex-direction: column;
+}
+
+#searchBar {
+        width: 50%;
+        margin: auto;
+}
+
+.buttonSearchBar {
+        width: 30vw;
+        margin: auto;
+        border-radius: 4px;
 }
 
 /* *************** SECTION HASTAG *************** */
 
+.listHashtag {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+}
+
+.listHashtag ul {
+        display: flex;
+}
+
+.listHashtag li {
+        list-style-type: none;
+        padding: 0.3rem;
+        
+}
+
+.listHashtag a {
+        text-decoration: none;
+}
+
 /* *************** SECTION LIST TITLE *************** */
+
+.listCrimes {
+        margin: auto;
+        border: 1px solid black;
+        width: 75vw;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 4px;
+}
+
+.listCrimes li{
+        list-style-type: square;
+}
+
 /* *************** SECTION CREATE CRIME *************** */
 
+.createCrime {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 0.5rem;
+        border: 1px solid black;
+        width: 75vw;
+        border-radius: 4px;
+}
 
+.createCrime a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        border: 1px solid black;
+        padding: 1rem;
+}
 
 /* X-Small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap */

@@ -59,6 +59,17 @@ body {
 }
 
 /* *************** SECTION HASTAG *************** */
+.hashtag-container li {
+
+        list-style: none ;
+        
+}
+
+.hashtag{ 
+        display: flex;
+        
+}
+
 /* *************** SECTION LIST TITLE *************** */
 /* *************** SECTION CREATE CRIME *************** */
 

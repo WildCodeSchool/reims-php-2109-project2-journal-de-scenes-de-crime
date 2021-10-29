@@ -78,7 +78,7 @@ h1 {
 }
 
 .buttonSearchBar {
-        width: 30vw;
+        padding: 0.2rem;
         margin: auto;
         border-radius: 4px;
 }

@@ -28,10 +28,10 @@ class CrimeSceneManager extends AbstractManager
         /**
          * Insert new crime scene in database
          */
-    public function insert(array $crimeScene)
+    public function insert(array $crimeScene): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name, title, adress, 
-        description, date, victim`) VALUES (:name, :title, :adress, :description, :date, :victime)");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, title, adress, 
+        description, date, victim) VALUES (:name, :title, :adress, :description, :date, :victim)");
         $statement->bindValue('name', $crimeScene['name'], \PDO::PARAM_STR);
         $statement->bindValue('title', $crimeScene['title'], \PDO::PARAM_STR);
         $statement->bindValue('adress', $crimeScene['adress'], \PDO::PARAM_STR);
@@ -39,9 +39,9 @@ class CrimeSceneManager extends AbstractManager
         $statement->bindValue('date', $crimeScene['date'], \PDO::PARAM_STR);
         $statement->bindValue('victim', $crimeScene['victim'], \PDO::PARAM_STR);
 
-        return $statement->execute();
+        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
     }
-
         /**
          * Update crime scene in database
          */

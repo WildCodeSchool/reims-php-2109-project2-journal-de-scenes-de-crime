@@ -75,8 +75,7 @@ h4 {
 
 .logo {
         font-family: var(--h1-font);
-        margin-top: 5rem;
-        margin-bottom: 3rem;
+        margin: 4vh 4vh 1vh 4vh;
         width: 30%;
 }
         
@@ -175,7 +174,7 @@ input::placeholder {
         border: 1px solid #A5593C;
         width: 75vw;
         border-radius: 20vh;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -230,6 +229,9 @@ input::placeholder {
         font-family: AmericanTypewriter;
         font-size: 1rem;
 }
+/* *************** SECTION FORM CREATE CRIME *************** */
+
+
 
 /* X-Small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap */

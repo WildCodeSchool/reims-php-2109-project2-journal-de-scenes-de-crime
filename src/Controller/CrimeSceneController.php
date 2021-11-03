@@ -25,17 +25,18 @@ class CrimeSceneController extends AbstractController
             // TODO validations (length, format...)
 
             // if validation is ok, insert and redirection
-            $crimeSceneManager->insert($crimeScene);
+            $id = $crimeSceneManager->insert($crimeScene);
+            header('Location:/crimes/show?id=' . $id);
         }
 
         return $this->twig->render('CreateCrime/CreateYourCrime.html.twig');
     }
 
-    public function show(): string
+    public function show(int $id): string
     {
         $crimeSceneManager = new CrimeSceneManager();
-        $name = $crimeSceneManager->show();
+        $crimeScene = $crimeSceneManager->selectOneById($id);
 
-        return $this->twig->render('ShowCrime/showCrimeScene.html.twig', ['name' => $name]);
+        return $this->twig->render('ShowCrime/showCrimeScene.html.twig', ['crimeScene' => $crimeScene]);
     }
 }

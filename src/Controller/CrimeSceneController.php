@@ -14,9 +14,6 @@ class CrimeSceneController extends AbstractController
         return $this->twig->render('Home/index.html.twig', ['titles' => $titles]);
     }
 
-    /**
-     * Add a new item
-     */
     public function add(): string
     {
         $crimeSceneManager = new CrimeSceneManager();

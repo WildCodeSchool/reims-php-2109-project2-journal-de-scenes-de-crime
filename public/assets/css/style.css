@@ -22,11 +22,13 @@
         --third-color: #FFF; 
         --light: rgba(250, 245, 242, 0.938);
         --dark: #14030d;
-        --text-font-size: 0.6rem;
         --h1-size: 4rem;
         --h1-font: Waschkueche;
         --h2-font: AmericanTypewriter;
         --h2-size: 2rem;
+        --h4-font: AmericanTypewriter;
+        --h4-size: 1rem;
+        --text-font-size: 0.6rem;
         --text-font: AmericanTypewriter;
 }
 
@@ -46,6 +48,11 @@ h1 {
 h2 {
         font-family: var(--h2-font);
         font-size: var(--h2-size);   
+}
+
+h4 {
+        font-family: var(--h4-font);
+        font-size: var(--h4-size);   
 }
 /* input.search {
 

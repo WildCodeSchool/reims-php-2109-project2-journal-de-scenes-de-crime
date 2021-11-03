@@ -1,4 +1,9 @@
 /*---------------------------Mobile First------------------------------*/
+* {
+        margin:0;
+        padding:0;
+}
+
 @font-face {
         font-family: amsterdam-four-ttf;
         src: url('../font/amsterdam-four-ttf.ttf') format('truetype');
@@ -43,16 +48,19 @@ h1 {
      font-family: var(--h1-font);
      font-size: var(--h1-size);   
      text-align: center;
+     margin: 1rem;
 }
 
 h2 {
         font-family: var(--h2-font);
-        font-size: var(--h2-size);   
+        font-size: var(--h2-size);  
+        text-align: center; 
 }
 
 h4 {
         font-family: var(--h4-font);
-        font-size: var(--h4-size);   
+        font-size: var(--h4-size);  
+        text-align: center; 
 }
 /* input.search {
 
@@ -111,6 +119,7 @@ input::placeholder {
 }
 
 .logo {
+        font-family: var(--h1-font);
         margin-top: 5rem;
         width: 30%;
 }
@@ -148,20 +157,26 @@ input::placeholder {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         margin-bottom: 1rem;
+
 }
 
 .listHashtag ul {
         display: flex;
+        justify-content: center;
 }
 
 .listHashtag li {
         list-style-type: none;
         padding: 0.3rem;
         
+        
 }
 
 .listHashtag a {
         text-decoration: none;
+        color: #14030d;
+        font-family:var(--text-font);
+        
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -179,7 +194,9 @@ input::placeholder {
 }
 
 .listCrimes li{
-        list-style-type: square;
+        list-style-type: none;
+        color: #A5593C;
+        text-align: center;
 }
 
 /* *************** SECTION CREATE CRIME *************** */

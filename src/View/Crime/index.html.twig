@@ -10,7 +10,7 @@
         <h1>Liste des scènes de crime :</h1>
         <ul id="crime_scene">
             {% for title in titles %}
-            <li>{{ title.title }}</li>
+            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
             {% endfor %}
         </ul>
     </section>

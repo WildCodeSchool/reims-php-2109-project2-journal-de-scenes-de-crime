@@ -11,7 +11,7 @@ class CrimeSceneController extends AbstractController
         $crimeSceneManager = new CrimeSceneManager();
         $titles = $crimeSceneManager->selectAll();
 
-        return $this->twig->render('Home/index.html.twig', ['titles' => $titles]);
+        return $this->twig->render('Crime/index.html.twig', ['titles' => $titles]);
     }
 
     public function add(): string
@@ -29,7 +29,7 @@ class CrimeSceneController extends AbstractController
             header('Location:/crimes/show?id=' . $id);
         }
 
-        return $this->twig->render('CreateCrime/CreateYourCrime.html.twig');
+        return $this->twig->render('Crime/createCrime.html.twig');
     }
 
     public function show(int $id): string
@@ -37,6 +37,6 @@ class CrimeSceneController extends AbstractController
         $crimeSceneManager = new CrimeSceneManager();
         $crimeScene = $crimeSceneManager->selectOneById($id);
 
-        return $this->twig->render('ShowCrime/showCrimeScene.html.twig', ['crimeScene' => $crimeScene]);
+        return $this->twig->render('Crime/showCrime.html.twig', ['crimeScene' => $crimeScene]);
     }
 }

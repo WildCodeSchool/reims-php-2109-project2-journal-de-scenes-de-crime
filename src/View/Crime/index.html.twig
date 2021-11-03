@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    {% include 'Components/_header.html.twig' %}
+    {% include 'Components/_navBar.html.twig' %}
+    {% include 'Components/_hashtag.html.twig' %}
+
+    <section class="listCrimes">
+        <h1>Liste des scènes de crime :</h1>
+        <ul id="crime_scene">
+            {% for title in titles %}
+            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="createCrime"> 
+        <h1>Create your crime scene</h1>
+        <a href="/crimes/add"> Create </a>
+    </section>
+
+{% endblock %}
+

@@ -1,4 +1,9 @@
 /*---------------------------Mobile First------------------------------*/
+* {
+        margin:0;
+        padding:0;
+}
+
 @font-face {
         font-family: amsterdam-four-ttf;
         src: url('../font/amsterdam-four-ttf.ttf') format('truetype');
@@ -22,10 +27,13 @@
         --third-color: #FFF; 
         --light: rgba(250, 245, 242, 0.938);
         --dark: #14030d;
-        --text-font-size: 0.6rem;
-        --h1-size: 1rem;
+        --h1-size: 4rem;
         --h1-font: Waschkueche;
-        --h2-font: amsterdam-four-ttf;
+        --h2-font: AmericanTypewriter;
+        --h2-size: 2rem;
+        --h4-font: AmericanTypewriter;
+        --h4-size: 1rem;
+        --text-font-size: 0.6rem;
         --text-font: AmericanTypewriter;
 }
 
@@ -39,7 +47,62 @@ body {
 h1 {
      font-family: var(--h1-font);
      font-size: var(--h1-size);   
+     text-align: center;
+     margin: 1rem;
 }
+
+h2 {
+        font-family: var(--h2-font);
+        font-size: var(--h2-size);  
+        text-align: center; 
+}
+
+h4 {
+        font-family: var(--h4-font);
+        font-size: var(--h4-size);  
+        text-align: center; 
+}
+
+.wrapper {
+        width: 100%;
+        margin: 0,5rem auto;
+}
+      
+.searchBar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+}
+input::placeholder {
+        color: #FFF;
+}
+
+#searchQueryInput {
+        width: 100%;
+        height: 7vh;
+        background:#A5593C;
+        outline: none;
+        border: none;
+        border-radius: 1.625rem;
+        padding: 0 3.5rem 0 1.5rem;
+        
+        font-size: 1rem;
+}
+      
+#searchQuerySubmit {
+        width: 3.5rem;
+        height: 2.8rem;
+        margin-left: -3.5rem;
+        background: none;
+        border: none;
+        outline: none;
+}
+      
+#searchQuerySubmit:hover {
+        cursor: pointer;
+}
+
 
 /* *************** HEADER *************** */
 .header {
@@ -51,6 +114,7 @@ h1 {
 }
 
 .logo {
+        font-family: var(--h1-font);
         margin-top: 5rem;
         width: 30%;
 }
@@ -88,20 +152,24 @@ h1 {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         margin-bottom: 1rem;
+
 }
 
 .listHashtag ul {
         display: flex;
+        justify-content: center;
 }
 
 .listHashtag li {
         list-style-type: none;
         padding: 0.3rem;
-        
 }
 
 .listHashtag a {
         text-decoration: none;
+        color: #14030d;
+        font-family:var(--text-font);
+        
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -119,7 +187,9 @@ h1 {
 }
 
 .listCrimes li{
-        list-style-type: square;
+        list-style-type: none;
+        color: #A5593C;
+        text-align: center;
 }
 
 /* *************** SECTION CREATE CRIME *************** */

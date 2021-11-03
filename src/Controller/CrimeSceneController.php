@@ -30,4 +30,12 @@ class CrimeSceneController extends AbstractController
 
         return $this->twig->render('CreateCrime/CreateYourCrime.html.twig');
     }
+
+    public function show(int $id): string
+    {
+        $crimeSceneManager = new CrimeSceneManager();
+        $name = $crimeSceneManager->selectOneById($id);
+
+        return $this->twig->render('ShowCrime/showCrimeScene.html.twig', ['name' => $name]);
+    }
 }

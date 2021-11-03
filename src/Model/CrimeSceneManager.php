@@ -28,7 +28,7 @@ class CrimeSceneManager extends AbstractManager
         /**
          * Insert new crime scene in database
          */
-    public function insert(array $crimeScene): int 
+    public function insert(array $crimeScene): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, title, adress, 
         description, date, victim) VALUES (:name, :title, :adress, :description, :date, :victim)");
@@ -41,9 +41,7 @@ class CrimeSceneManager extends AbstractManager
 
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
-
     }
-
         /**
          * Update crime scene in database
          */

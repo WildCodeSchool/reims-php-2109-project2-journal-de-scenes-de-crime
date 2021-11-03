@@ -6,28 +6,9 @@ class CrimeSceneManager extends AbstractManager
 {
     public const TABLE = 'crime_scene';
 
-        /**
-        * Show crime scene in database
-        */
-    public function show()
-    {
-        $statement = $this->pdo->prepare("SELECT name, title, adress, description, date, victim 
-        FROM crime_scene");
-        $statement->execute();
-        return $statement->fetch();
-    }
-        /**
-        * Show title crime scene in database
-        */
-    public function showTitle()
-    {
-        $statement = $this->pdo->prepare("SELECT title FROM crime_scene");
-        $statement->execute();
-        return $statement->fetch();
-    }
-        /**
-         * Insert new crime scene in database
-         */
+    /**
+     * Insert new crime scene in database
+     */
     public function insert(array $crimeScene): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, title, adress, 

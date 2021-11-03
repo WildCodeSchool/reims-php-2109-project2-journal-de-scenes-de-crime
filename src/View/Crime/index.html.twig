@@ -7,7 +7,7 @@
     {% include 'Components/_hashtag.html.twig' %}
 
     <section class="listCrimes">
-        <h1>Liste des scènes de crime :</h1>
+        <h1 class="indexlist" >Liste de scènes de crime</h1>
         <ul id="crime_scene">
             {% for title in titles %}
             <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
@@ -16,7 +16,7 @@
     </section>
 
     <section class="createCrime"> 
-        <h1>Create your crime scene</h1>
+        <h1>Créez votre scène de crime</h1>
         <a href="/crimes/add"> Create </a>
     </section>
 

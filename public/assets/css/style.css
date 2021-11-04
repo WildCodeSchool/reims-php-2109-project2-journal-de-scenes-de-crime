@@ -33,7 +33,7 @@
         --h2-size: 2rem;
         --h4-font: AmericanTypewriter;
         --h4-size: 1rem;
-        --text-font-size: 0.6rem;
+        --text-size: 1.1rem;
         --text-font: AmericanTypewriter;
 }
 
@@ -75,8 +75,8 @@ h4 {
 
 .logo {
         font-family: var(--h1-font);
-        margin: 4vh 4vh 1vh 4vh;
         width: 30%;
+        margin-top: 0.7rem;
 }
 
 .logocontainer{
@@ -93,7 +93,6 @@ h4 {
         height: 10vh;
         display: flex;
         justify-content: center;
-        margin-bottom: 2rem;
 }
 
 .styleNav {
@@ -127,6 +126,8 @@ input::placeholder {
         border-radius: 1.625rem;
         padding: 0 3.5rem 0 1.5rem;
         font-size: 1rem;
+        text-align: center;
+
 }
       
 #searchQuerySubmit {
@@ -151,7 +152,7 @@ input::placeholder {
 .listHashtag {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        margin-bottom: 1rem;
+        margin-bottom: 1.7rem;
 
 }
 
@@ -169,7 +170,7 @@ input::placeholder {
         text-decoration: none;
         color: #14030d;
         font-family:var(--text-font);
-        
+        font-size: var(--text-size)
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -221,6 +222,7 @@ input::placeholder {
         font-family: AmericanTypewriter;
         font-size: 2rem;
         color: #14030d;
+        margin-bottom: 0.1rem;
 }
 
 .createCrime a {

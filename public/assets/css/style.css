@@ -183,20 +183,19 @@ input::placeholder {
         padding: 0.5rem;
         border: 1px solid #A5593C;
         width: 85vw;
-        border-radius: 20vh;
+        border-radius: 6vh;
 }
 .createCrime h1 {
         font-family: AmericanTypewriter;
         font-size: 2rem;
         color: #14030d;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.5rem;
 }
 
 .createCrime a {
         text-decoration: none;
         text-align: center;
         background:#A5593C;
-        outline: none;
         border: none;
         color: #FFF;
         border-radius: 10vh;
@@ -212,7 +211,7 @@ input::placeholder {
         margin: auto;
         border: 1px solid #A5593C;
         width: 85vw;
-        border-radius: 20vh;
+        border-radius: 6vh;
         margin-top: 1rem;
         padding: 0.5rem;
         display: flex;
@@ -235,6 +234,7 @@ input::placeholder {
 }
 .listCrimes a {
         text-decoration: none;
+        font-size: var(--text-size);
         color: #A5593C;
         text-align: center;
 }
@@ -250,7 +250,10 @@ input::placeholder {
         width: 75vw;
         border-radius: 20vh;
 }
+
 .formcrime label{
+        font-size: var(--text-size);
+        font-family: var(--text-font);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -259,6 +262,7 @@ input::placeholder {
         width: 75vw;
         border-radius: 20vh;
 }
+
 .formcrime input{
         display: flex;
         flex-direction: column;
@@ -291,6 +295,14 @@ input::placeholder {
 .formcrime input:focus {
         border-bottom: 5px solid #A5593C;
 } 
+
+.submit-form {
+        margin-top: 0.8rem;
+        color: var(--third-color);
+        background-color: var(--secondary-color);
+        width: 20vw;
+        border-radius: 1rem;
+}
 
 /* X-Small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap */

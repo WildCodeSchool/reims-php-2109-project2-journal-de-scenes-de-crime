@@ -1,1 +1,26 @@
-<h1>auteur {{crimeScene.name}}</h1>
+
+<section>
+        <h1> {{crimeScene.title}} </h1>
+    <div>
+        <p> <span> Auteur :</span> {{crimeScene.name}} </p>
+    </div>
+
+    <div>
+        <time> <span> Date :</span> {{crimeScene.date}} </time>
+    </div>
+    
+    <div>
+        <p> <span> Adresse : </span> {{crimeScene.adress}} </p>
+    </div>
+
+    <div>
+        <p> <span> Victime </span> : {{crimeScene.victim}} </p>
+    </div>
+    
+    <div>
+        <span> Description du meurtre :</span>
+        <p> {{crimeScene.description}} </p>
+    </div>
+
+    <a href="/">Retour à l'accueil</a>
+</section>

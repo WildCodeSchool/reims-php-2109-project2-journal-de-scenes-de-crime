@@ -2,23 +2,24 @@
 <section>
         <h1> {{crimeScene.title}} </h1>
     <div>
-        <h1> Auteur: {{crimeScene.name}} </h1>
+        <p> <span> Auteur :</span> {{crimeScene.name}} </p>
     </div>
 
     <div>
-        <h1> Date : {{crimeScene.date}} </h1>
+        <time> <span> Date :</span> {{crimeScene.date}} </time>
     </div>
     
     <div>
-        <h1>Adresse : {{crimeScene.adress}} </h1>
+        <p> <span> Adresse : </span> {{crimeScene.adress}} </p>
     </div>
 
     <div>
-        <h1>Victime : {{crimeScene.victim}} </h1>
+        <p> <span> Victime </span> : {{crimeScene.victim}} </p>
     </div>
     
     <div>
-        <h1> Description du meurtre : {{crimeScene.description}} </h1>
+        <span> Description du meurtre :</span>
+        <p> {{crimeScene.description}} </p>
     </div>
 
     <a href="/">Retour à l'accueil</a>

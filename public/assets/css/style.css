@@ -323,6 +323,12 @@ input::placeholder {
         /* *************** HEADER *************** */
         /* *************** NAVBAR *************** */
         /* *************** SECTION HASTAG *************** */
+
+
+        .list-create {
+                display: flex;
+        }
+
         /* *************** SECTION LIST TITLE *************** */
         /* *************** SECTION CREATE CRIME *************** */
     }

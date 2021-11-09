@@ -1,29 +1,31 @@
 <form class="formcrime" action="" method="post">
     <div>
+    	<input type="hidden" value="{{ crimeScene.id }}" name="id">
+
         <label for="name">Nom :</label>
-        <input type="text" id="name" name="name">
+        <input type="text" value="{{crimeScene.name}}" name="name">
     </div>
     <div>
         <label for="title">Nom de la scène de crime :</label>
-        <input type="text" id="title" name="title">
+        <input type="text" value="{{crimeScene.title}}" name="title">
     </div>
     <div>
         <label for="adress">Adresse :</label>
-        <input type="text" id="adress" name="adress">
+        <input type="text" value="{{crimeScene.adress}}" name="adress">
     </div>
     <div>
         <label for="date">Date :</label>
-        <input type="date" id="date" name="date">
+        <input type="date" value="{{crimeScene.date}}" name="date">
     </div>
     <div>
         <label for="victim">Victime :</label>
-        <input type="text" id="victim" name="victim">
+        <input type="text" value="{{crimeScene.victim}}" name="victim">
     </div>
     <div>
         <label for="description">Description :</label>
-        <textarea id="description" name="description"></textarea>
+        <textarea id="description" value="{{crimeScene.description}}" name="description"></textarea>
     </div>
-    <button type="submit" value="Submit">Envoyer</button>
+    <button type="submit">Envoyer</button>
     <a href="/">
     Retourner à la home
     </a>

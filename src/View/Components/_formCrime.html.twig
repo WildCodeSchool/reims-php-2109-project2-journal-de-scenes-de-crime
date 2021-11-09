@@ -1,7 +1,5 @@
 <form class="formcrime" action="" method="post">
     <div>
-    	<input type="hidden" value="{{ crimeScene.id }}" name="id">
-
         <label for="name">Nom :</label>
         <input type="text" value="{{crimeScene.name}}" name="name">
     </div>
@@ -26,6 +24,7 @@
         <textarea id="description" value="{{crimeScene.description}}" name="description"></textarea>
     </div>
     <button type="submit">Envoyer</button>
+    <input type="hidden" value="{{ crimeScene.id }}" name="id">
     <a href="/">
     Retourner à la home
     </a>

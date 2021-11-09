@@ -57,7 +57,7 @@ class CrimeSceneController extends AbstractController
         }
 
         return $this->twig->render('Crime/editCrime.html.twig', [
-            'crime_scene' => $crimeScene,
+            'crimeScene' => $crimeScene,
         ]);
     }
 }

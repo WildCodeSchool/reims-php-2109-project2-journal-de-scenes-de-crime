@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Model\CrimeSceneManager;
 use App\Model\CommentManager;
 
-
 class CrimeSceneController extends AbstractController
 {
     public function index(): string
@@ -41,14 +40,13 @@ class CrimeSceneController extends AbstractController
         $crimeSceneManager = new CrimeSceneManager();
         $crimeScene = $crimeSceneManager->selectOneById($id);
 
-        $commentCrimeSceneManager = new CommentManager();
-        $commentScene = $commentCrimeSceneManager->selectOneByIdWithComment($id);
+        $commentManager = new CommentManager();
+        $commentScene = $commentManager->selectOneByIdWithComment($id);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $commentScene = array_map('trim', $_POST);
-        
             // créer un commentaire associé à $id
-            $id = $commentCrimeSceneManager->insert($commentScene);
+            $id = $commentManager->insert($commentScene);
         }
 
         return $this->twig->render('Crime/showCrime.html.twig', ['crimeScene' => $crimeScene]);

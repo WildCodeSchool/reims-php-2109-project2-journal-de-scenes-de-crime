@@ -1,24 +1,28 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+    <div class="grid">
+        {% include 'Components/_header.html.twig' %}
+        {% include 'Components/_navBar.html.twig' %}
+    </div>
+    <div class="test">
+        {% include 'Components/_hashtag.html.twig' %}
+        <div class="create-list">
+            <section class="createCrime"> 
+                <h1>Créez votre scène<br>de crime</h1>
+                <a href="/crimes/add"> Créez </a>
+            </section>
 
-    {% include 'Components/_header.html.twig' %}
-    {% include 'Components/_navBar.html.twig' %}
-    {% include 'Components/_hashtag.html.twig' %}
-    <div class="list-create">
-        <section class="createCrime"> 
-            <h1>Créez votre scène<br>de crime</h1>
-            <a href="/crimes/add"> Créez </a>
-        </section>
+            <section class="listCrimes">
+                <h1>Les scènes<br>de crime</h1>
+                <ul id="crime_scene">
+                    {% for title in titles %}
+                    <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
 
-        <section class="listCrimes">
-            <h1>Les scènes<br>de crime</h1>
-            <ul id="crime_scene">
-                {% for title in titles %}
-                <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
-                {% endfor %}
-            </ul>
-        </section>
     </div>
 
 {% endblock %}

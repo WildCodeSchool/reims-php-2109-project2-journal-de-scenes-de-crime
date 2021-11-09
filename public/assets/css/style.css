@@ -27,13 +27,13 @@
         --third-color: #FFF; 
         --light: rgba(250, 245, 242, 0.938);
         --dark: #14030d;
-        --h1-size: 4rem;
+        --h1-size: 3rem;
         --h1-font: Waschkueche;
         --h2-font: AmericanTypewriter;
         --h2-size: 2rem;
         --h4-font: AmericanTypewriter;
         --h4-size: 1rem;
-        --text-font-size: 0.6rem;
+        --text-size: 1.1rem;
         --text-font: AmericanTypewriter;
 }
 
@@ -75,8 +75,8 @@ h4 {
 
 .logo {
         font-family: var(--h1-font);
-        margin: 4vh 4vh 1vh 4vh;
         width: 30%;
+        margin-top: 0.7rem;
 }
 
 .logocontainer{
@@ -93,7 +93,6 @@ h4 {
         height: 10vh;
         display: flex;
         justify-content: center;
-        margin-bottom: 2rem;
 }
 
 .styleNav {
@@ -127,6 +126,8 @@ input::placeholder {
         border-radius: 1.625rem;
         padding: 0 3.5rem 0 1.5rem;
         font-size: 1rem;
+        text-align: center;
+
 }
       
 #searchQuerySubmit {
@@ -151,7 +152,7 @@ input::placeholder {
 .listHashtag {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        margin-bottom: 1rem;
+        margin-bottom: 1.7rem;
 
 }
 
@@ -169,7 +170,39 @@ input::placeholder {
         text-decoration: none;
         color: #14030d;
         font-family:var(--text-font);
-        
+        font-size: var(--text-size)
+}
+
+/* *************** SECTION CREATE CRIME *************** */
+
+.createCrime {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 0.5rem;
+        border: 1px solid #A5593C;
+        width: 85%;
+        border-radius: 40px;
+}
+.createCrime h1 {
+        font-family: AmericanTypewriter;
+        font-size: 2rem;
+        color: #14030d;
+        margin-bottom: 0.5rem;
+}
+
+.createCrime a {
+        text-decoration: none;
+        text-align: center;
+        background:#A5593C;
+        border: none;
+        color: #FFF;
+        border-radius: 40px;
+        padding: 1rem;
+        font-family: AmericanTypewriter;
+        font-size: 1rem;
+        width: 40%;
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -177,9 +210,9 @@ input::placeholder {
 .listCrimes {
         margin: auto;
         border: 1px solid #A5593C;
-        width: 75vw;
-        border-radius: 20vh;
-        margin-top: 1rem;
+        width: 85%;
+        border-radius: 40px;
+        margin-top: 1.6rem;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -201,39 +234,11 @@ input::placeholder {
 }
 .listCrimes a {
         text-decoration: none;
+        font-size: var(--text-size);
         color: #A5593C;
         text-align: center;
 }
 
-/* *************** SECTION CREATE CRIME *************** */
-
-.createCrime {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: auto;
-        padding: 0.5rem;
-        border: 1px solid #A5593C;
-        width: 75vw;
-        border-radius: 20vh;
-}
-.createCrime h1 {
-        font-family: AmericanTypewriter;
-        font-size: 2rem;
-        color: #14030d;
-}
-
-.createCrime a {
-        text-decoration: none;
-        background:#A5593C;
-        outline: none;
-        border: none;
-        color: #FFF;
-        border-radius: 10vh;
-        padding: 1rem;
-        font-family: AmericanTypewriter;
-        font-size: 1rem;
-}
 /* *************** SECTION FORM CREATE CRIME *************** */
 
 .formcrime {
@@ -245,7 +250,10 @@ input::placeholder {
         width: 75vw;
         border-radius: 20vh;
 }
+
 .formcrime label{
+        font-size: var(--text-size);
+        font-family: var(--text-font);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -254,6 +262,7 @@ input::placeholder {
         width: 75vw;
         border-radius: 20vh;
 }
+
 .formcrime input{
         display: flex;
         flex-direction: column;
@@ -280,12 +289,30 @@ input::placeholder {
         margin: auto;
         padding: 0.5rem;
         width: 75vw;
-        border-radius: 20vh;
+        border-radius: 10px;
+        height: 6vh;
 }
 
 .formcrime input:focus {
         border-bottom: 5px solid #A5593C;
 } 
+
+.submit-form {
+        margin: 0.8rem 0rem 0.8rem 0rem;
+        color: var(--third-color);
+        background-color: var(--secondary-color);
+        font-family: var(--text-font);
+        font-size: var(--text-size);
+        width: 60%;
+        padding: 5px;
+        border-radius: 0.4rem;
+        border: none;
+}
+
+.link-home {
+        text-decoration: none;
+        color: var(--secondary-color);
+}
 
 /* X-Small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap */
@@ -296,6 +323,12 @@ input::placeholder {
         /* *************** HEADER *************** */
         /* *************** NAVBAR *************** */
         /* *************** SECTION HASTAG *************** */
+
+
+        .list-create {
+                display: flex;
+        }
+
         /* *************** SECTION LIST TITLE *************** */
         /* *************** SECTION CREATE CRIME *************** */
     }

@@ -25,7 +25,8 @@ class CommentManager extends AbstractManager
     public function selectAllByCrimeSceneId(int $crimeSceneId)
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT name, message, date FROM " . static::TABLE ." WHERE crimescene_id = :id;");
+        $statement = $this->pdo->prepare("SELECT name, message, date FROM " . static::TABLE .
+        " WHERE crimescene_id = :id;");
         $statement->bindValue('id', $crimeSceneId, \PDO::PARAM_INT);
         $statement->execute();
 

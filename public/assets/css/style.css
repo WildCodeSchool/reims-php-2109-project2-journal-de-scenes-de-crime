@@ -173,7 +173,7 @@ input::placeholder {
         margin-bottom: 0.5rem;
 }
 
-.createCrime a {
+.createCrime .button{
         text-decoration: none;
         text-align: center;
         background: var(--secondary-color);
@@ -372,6 +372,7 @@ input::placeholder {
         .logocontainer {
                 grid-column: 1;
                 max-width: 80%;
+                margin-left: 2rem;
         }
 
         .logo {
@@ -414,26 +415,29 @@ input::placeholder {
         /* *************** SECTION CREATE CRIME *************** */
         .createCrime {
                 justify-content: center;
+                width: 420px;
                 height: 60vh;
                 border: none;
                 margin: 0px;
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
-                transform: translateY(-30px);
+                background-position-x: 20px;
+                background-position-y: 2px;
         }
 
-        .createCrime a{
-                width: 25%;
-                transform: translateY(-40px);
-                margin-right: 1.7rem;
+        .createCrime .button{
+                height: 12.5;
+                height: 13%;
+                width: 255px;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
         }
 
         .createCrime h1{
-                transform: translatey(-40px);
                 font-family: var(--h1-font);
                 font-size: 1.5rem;
                 text-align: center; 
-                margin-right: 2.5rem;
-                margin-bottom: 4rem;
         }
 
         /* *************** SECTION LIST TITLE *************** */
@@ -443,14 +447,14 @@ input::placeholder {
                 border: none;
                 margin: 0px;
                 background: center / contain no-repeat url(../images/Carnetlist-desk.svg);
-                background-size: 95%;
         }
 
         .listCrimes h1 {
                 font-family: var(--h1-font);
                 font-size: var(--h1-size);
-                color: #A5593C;   
                 text-align: center; 
+                width: 50%;
+                margin-bottom: 10rem;
         }
     }
 

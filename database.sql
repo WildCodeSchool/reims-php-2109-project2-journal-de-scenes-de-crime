@@ -66,7 +66,7 @@ CREATE TABLE `comment` (
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(50) NOT NULL,
   `message` varchar(255) NOT NULL,
-  `date` date NOT NULL
+  `date` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 --
@@ -77,14 +77,6 @@ CREATE TABLE `user` (
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL
 );
 
---
--- Ajout d'une colonne dans la table `comment`
---
-
-ALTER TABLE comment ADD crimescene_id INT; 
-
---
--- Liaison de la table comment avec la table crime_scene avec FOREIGN KEY
---
+ALTER TABLE comment ADD crimescene_id INT;
 
 ALTER TABLE comment ADD FOREIGN KEY (crimescene_id) REFERENCES crime_scene(id);

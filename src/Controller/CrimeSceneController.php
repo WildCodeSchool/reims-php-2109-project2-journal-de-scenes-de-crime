@@ -52,4 +52,25 @@ class CrimeSceneController extends AbstractController
 
         return $this->twig->render('Crime/showCrime.html.twig', ['crimeScene' => $crimeScene]);
     }
+
+    public function edit(int $id): string
+    {
+        $crimeSceneManager = new CrimeSceneManager();
+        $crimeScene = $crimeSceneManager->selectOneById($id);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // clean $_POST data
+            $crimeScene = array_map('trim', $_POST);
+
+            // TODO validations (length, format...)
+
+            // if validation is ok, update and redirection
+            $crimeSceneManager->update($crimeScene);
+            header('Location:/crimes/show?id=' . $id);
+        }
+
+        return $this->twig->render('Crime/editCrime.html.twig', [
+            'crimeScene' => $crimeScene,
+        ]);
+    }
 }

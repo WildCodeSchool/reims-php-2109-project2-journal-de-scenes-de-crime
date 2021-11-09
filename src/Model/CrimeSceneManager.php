@@ -26,14 +26,18 @@ class CrimeSceneManager extends AbstractManager
         /**
          * Update crime scene in database
          */
-    public function update(array $crimeScene)
+    public function update(array $crimeScene): bool
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
-        " SET `title, description` = :title, :description, WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " 
+        SET name=:name, title=:title, adress=:adress, description=:description, 
+        date=:date, victim=:victim WHERE id=:id");
         $statement->bindValue('id', $crimeScene['id'], \PDO::PARAM_INT);
+        $statement->bindValue('name', $crimeScene['name'], \PDO::PARAM_STR);
         $statement->bindValue('title', $crimeScene['title'], \PDO::PARAM_STR);
+        $statement->bindValue('adress', $crimeScene['adress'], \PDO::PARAM_STR);
         $statement->bindValue('description', $crimeScene['description'], \PDO::PARAM_STR);
-
+        $statement->bindValue('date', $crimeScene['date'], \PDO::PARAM_STR);
+        $statement->bindValue('victim', $crimeScene['victim'], \PDO::PARAM_STR);
         return $statement->execute();
     }
         /**

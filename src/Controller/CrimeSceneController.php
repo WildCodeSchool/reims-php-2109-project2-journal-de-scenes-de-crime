@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\CrimeSceneManager;
+use App\Model\CommentManager;
 
 class CrimeSceneController extends AbstractController
 {
@@ -34,8 +35,20 @@ class CrimeSceneController extends AbstractController
 
     public function show(int $id): string
     {
+        // si je fais une requête de type POST
+
         $crimeSceneManager = new CrimeSceneManager();
         $crimeScene = $crimeSceneManager->selectOneById($id);
+
+        $commentManager = new CommentManager();
+        $newComment = $commentManager->selectAllByCrimeSceneId($id);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // clean $_POST data
+            $newComment = array_map('trim', $_POST);
+            // créer un commentaire associé à $id
+            $newComment['crimescene_id'] = $id;
+            $id = $commentManager->insert($newComment);
+        }
 
         return $this->twig->render('Crime/showCrime.html.twig', ['crimeScene' => $crimeScene]);
     }

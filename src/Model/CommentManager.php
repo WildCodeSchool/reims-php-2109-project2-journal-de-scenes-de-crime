@@ -9,12 +9,12 @@ class CommentManager extends AbstractManager
     /**
      * Insert new comment  in database
      */
-    public function insert(array $commentScene): int
+    public function insert(array $sceneComments): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, message)
          VALUES (:name, :message)");
-        $statement->bindValue('name', $commentScene['name'], \PDO::PARAM_STR);
-        $statement->bindValue('message', $commentScene['message'], \PDO::PARAM_STR);
+        $statement->bindValue('name', $sceneComments['name'], \PDO::PARAM_STR);
+        $statement->bindValue('message', $sceneComments['message'], \PDO::PARAM_STR);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
@@ -22,14 +22,13 @@ class CommentManager extends AbstractManager
     * Get one row from database by ID.
     *
     */
-    public function selectOneByIdWithComment(int $id)
+    public function selectAllByCrimeSceneId(int $crimeSceneId)
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT c.name, c.message, c.date FROM " . static::TABLE .
-        " AS c JOIN crime_scene AS cs ON cs.id = c.crimescene_id WHERE cs.id = :id;");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("SELECT name, message, date FROM " . static::TABLE ." WHERE crimescene_id = :id;");
+        $statement->bindValue('id', $crimeSceneId, \PDO::PARAM_INT);
         $statement->execute();
 
-        return $statement->fetch();
+        return $statement->fetchAll();
     }
 }

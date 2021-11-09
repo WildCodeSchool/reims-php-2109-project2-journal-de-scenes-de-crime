@@ -41,12 +41,13 @@ class CrimeSceneController extends AbstractController
         $crimeScene = $crimeSceneManager->selectOneById($id);
 
         $commentManager = new CommentManager();
-        $commentScene = $commentManager->selectOneByIdWithComment($id);
+        $newComment = $commentManager->selectAllByCrimeSceneId($id);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
-            $commentScene = array_map('trim', $_POST);
+            $newComment = array_map('trim', $_POST);
             // créer un commentaire associé à $id
-            $id = $commentManager->insert($commentScene);
+            $newComment['crimescene_id'] = $id;
+            $id = $commentManager->insert($newComment);
         }
 
         return $this->twig->render('Crime/showCrime.html.twig', ['crimeScene' => $crimeScene]);

@@ -9,7 +9,7 @@
 return [
     '' => ['CrimeSceneController', 'index',],
     'items' => ['ItemController', 'index',],
-    'items/edit' => ['ItemController', 'edit', ['id']],
+    'crimes/edit' => ['CrimeSceneController', 'edit', ['id']],
     'crimes/show' => ['CrimeSceneController', 'show', ['id']],
     'crimes/add' => ['CrimeSceneController', 'add',],
     'items/delete' => ['ItemController', 'delete',],

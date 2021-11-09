@@ -1,0 +1,31 @@
+<form class="formcrime" action="" method="post">
+    <div>
+        <label for="name"></label>
+        <input type="text" id="name" name="name" value= "{{crimeScene.name}}">
+    </div>
+    <div>
+        <label for="title">{{crimeScene.title}}</label>
+        <input type="text" id="title" name="title">
+    </div>
+    <div>
+        <label for="adress">{{crimeScene.adress}}</label>
+        <input type="text" id="adress" name="adress">
+    </div>
+    <div>
+        <label for="date">{{crimeScene.date}}</label>
+        <input type="date" id="date" name="date">
+    </div>
+    <div>
+        <label for="victim">{{crimeScene.victim}}</label>
+        <input type="text" id="victim" name="victim">
+    </div>
+    <div>
+        <label for="description">{{crimeScene.description}}</label>
+        <textarea id="description" name="description"></textarea>
+    </div>
+    <button type="submit" value="Submit">Modifier</button>
+    
+    <a href="/crimes/show?id={{crimeScene.id}}">
+    Retourner sur la page du crime</a>
+
+</form>

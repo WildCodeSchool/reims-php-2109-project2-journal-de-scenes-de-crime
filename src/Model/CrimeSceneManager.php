@@ -29,12 +29,16 @@ class CrimeSceneManager extends AbstractManager
     public function update(array $crimeScene)
     {
         $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
-        " SET `title, description` = :title, :description, WHERE id=:id");
-        $statement->bindValue('id', $crimeScene['id'], \PDO::PARAM_INT);
+        "SET `name ,title ,adress ,description ,date ,victim` = 
+        :name, :title, :adress, :description, :date, :victim 
+        WHERE id=:id");
+        $statement->bindValue('name', $crimeScene['name'], \PDO::PARAM_STR);
         $statement->bindValue('title', $crimeScene['title'], \PDO::PARAM_STR);
+        $statement->bindValue('adress', $crimeScene['adress'], \PDO::PARAM_STR);
         $statement->bindValue('description', $crimeScene['description'], \PDO::PARAM_STR);
-
-        return $statement->execute();
+        $statement->bindValue('date', $crimeScene['date'], \PDO::PARAM_STR);
+        $statement->bindValue('victim', $crimeScene['victim'], \PDO::PARAM_STR);
+        $statement->execute();
     }
         /**
         * Delete row form an ID

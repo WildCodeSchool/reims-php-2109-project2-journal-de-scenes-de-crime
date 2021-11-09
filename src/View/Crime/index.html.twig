@@ -1,19 +1,17 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div class="grid">
         {% include 'Components/_header.html.twig' %}
-        {% include 'Components/_navBar.html.twig' %}
-    </div>
-    <div class="test">
+    <div class="body">
         {% include 'Components/_hashtag.html.twig' %}
         <div class="create-list">
-            <section class="createCrime"> 
+            <section class="createCrime">
                 <h1>Créez votre scène<br>de crime</h1>
                 <a href="/crimes/add"> Créez </a>
             </section>
 
             <section class="listCrimes">
+                <img class="img-ipad" src="/assets/images/Carnetcreate-desk.svg" alt="carnet">
                 <h1>Les scènes<br>de crime</h1>
                 <ul id="crime_scene">
                     {% for title in titles %}

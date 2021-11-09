@@ -219,6 +219,10 @@ input::placeholder {
         text-align: center;
 }
 
+.img-ipad {
+        display: none;
+}
+
 /* *************** SECTION FORM CREATE CRIME *************** */
 
 .formcrime {
@@ -292,6 +296,12 @@ input::placeholder {
         .titleLayout {
                 display: block;
         }
+
+        .img-ipad {
+                display: initial;
+                width: 100px;
+                margin: auto;
+        }
         /* *************** NAVBAR *************** */
         /* *************** SECTION HASTAG *************** */
 
@@ -303,7 +313,6 @@ input::placeholder {
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
-                border: black 1px solid;
         }
         /* *************** SECTION CREATE CRIME *************** */
 
@@ -337,49 +346,114 @@ input::placeholder {
     
     @media (min-width: 992px) {
          /* *************** HEADER *************** */
-        .grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+        
+        .img-ipad {
+                display: none;
         }
-         .titleLayout {
+
+        .header {
+                display: grid;
+                grid-template-columns: 0.5fr 2fr;
+        }
+
+        .title {
+                margin-top: 3rem;
+        }
+
+        .titleLayout {
                 display: inline;
         }
-        /* *************** NAVBAR *************** */
+
+        .nav-title {
+                grid-column: 2;
+                margin-right: 2rem;
+        }
+
+        .logocontainer {
+                grid-column: 1;
+                max-width: 80%;
+        }
+
+        .logo {
+                width: 70%;
+        }
 
         .navbar {
                 margin-top: 3rem;
         }
 
-        .test {
+        #searchQueryInput {
+                width: 50%;
+                margin: auto;
+                margin-top: 2rem;
+        }
+
+        /* *************** SECTION HASTAG *************** */
+        .body {
                 display: flex;
                 flex-direction: row;
                 margin-top: 3rem;
         }
 
-        /* *************** SECTION HASTAG *************** */
-
         .listHashtag ul {
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
         }
+
+        /* JOIN CREATE AND LIST */
 
         .create-list {
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-around;
+                height: 65vh;
         }
 
         /* *************** SECTION CREATE CRIME *************** */
         .createCrime {
                 justify-content: center;
-                height: 50vh;
+                height: 60vh;
                 border: none;
                 margin: 0px;
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
+                transform: translateY(-30px);
+        }
+
+        .createCrime a{
+                width: 25%;
+                transform: translateY(-40px);
+                margin-right: 1.7rem;
+        }
+
+        .createCrime h1{
+                transform: translatey(-40px);
+                font-family: var(--h1-font);
+                font-size: 1.5rem;
+                text-align: center; 
+                margin-right: 2.5rem;
+                margin-bottom: 4rem;
         }
 
         /* *************** SECTION LIST TITLE *************** */
+        .listCrimes {
+                justify-content: center;
+                height: 60vh;
+                border: none;
+                margin: 0px;
+                background: center / contain no-repeat url(../images/Carnetlist-desk.svg);
+                background-size: 95%;
+        }
+
+        .listCrimes h1 {
+                font-family: var(--h1-font);
+                font-size: var(--h1-size);
+                color: #A5593C;   
+                text-align: center; 
+        }
     }
-    
+
     /* X-Large devices (large desktops, 1200px and up) */
     
     @media (min-width: 1200px) {

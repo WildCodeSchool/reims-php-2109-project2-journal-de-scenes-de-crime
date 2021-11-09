@@ -65,7 +65,7 @@ h2 {
 
 .logo {
         font-family: var(--h1-font);
-        width: 30%;
+        width: 25%;
         margin-top: 0.7rem;
 }
 
@@ -82,14 +82,10 @@ h2 {
 }
 
 /* *************** SEARCHBAR *************** */
-
-.wrapper {
-        width: 100%;
-        margin: 0,5rem auto;
-}
       
 .searchBar {
-        width: 100%;
+        width: 80%;
+        margin: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -108,6 +104,7 @@ input::placeholder {
         padding: 0 3.5rem 0 1.5rem;
         font-size: 1rem;
         text-align: center;
+        margin-bottom: 2rem;
 
 }
       
@@ -118,6 +115,7 @@ input::placeholder {
         background: none;
         border: none;
         outline: none;
+        padding-bottom: 55px;
 }
       
 #searchQuerySubmit:hover {
@@ -131,9 +129,10 @@ input::placeholder {
 
 /* *************** SECTION HASTAG *************** */
 .listHashtag {
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-top: 1px solid var(--dark);
+        border-bottom: 1px solid var(--dark);
         margin-bottom: 1.7rem;
+        margin-left: 2rem;
 
 }
 
@@ -149,7 +148,7 @@ input::placeholder {
 
 .listHashtag a {
         text-decoration: none;
-        color: #14030d;
+        color: var(--dark);
         font-family:var(--text-font);
         font-size: var(--text-size)
 }
@@ -167,22 +166,23 @@ input::placeholder {
         border-radius: 40px;
 }
 .createCrime h1 {
-        font-family: AmericanTypewriter;
         font-size: 2rem;
-        color: #14030d;
-        margin-bottom: 0.5rem;
 }
 
 .createCrime .button{
-        text-decoration: none;
         text-align: center;
         background: var(--secondary-color);
-        color: var(--third-color);
         border-radius: 40px;
+        padding: 1rem;
+        width: 40%;
+}
+
+.createCrime a{
+        text-decoration: none;
+        color: var(--third-color);
         padding: 1rem;
         font-family: AmericanTypewriter;
         font-size: 1rem;
-        width: 40%;
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -302,7 +302,10 @@ input::placeholder {
                 width: 100px;
                 margin: auto;
         }
-        /* *************** NAVBAR *************** */
+
+        .searchBar {
+                width: 70%;
+        }
         /* *************** SECTION HASTAG *************** */
 
 
@@ -318,7 +321,6 @@ input::placeholder {
 
         .createCrime {
                 width: 40%;
-                height: 20vh;
                 margin: auto;
         }
 
@@ -326,7 +328,6 @@ input::placeholder {
 
         .listCrimes {
                 width: 40%;
-                height: 20vh;
                 margin: auto;
         }
 
@@ -358,6 +359,7 @@ input::placeholder {
 
         .title {
                 margin-top: 3rem;
+                margin-bottom: 4rem;
         }
 
         .titleLayout {
@@ -365,6 +367,7 @@ input::placeholder {
         }
 
         .nav-title {
+                width: 100%;
                 grid-column: 2;
                 margin-right: 2rem;
         }
@@ -372,21 +375,20 @@ input::placeholder {
         .logocontainer {
                 grid-column: 1;
                 max-width: 80%;
-                margin-left: 2rem;
+                margin-left: 1rem;
         }
 
         .logo {
+                margin-top: 2rem;
                 width: 70%;
         }
 
-        .navbar {
-                margin-top: 3rem;
+        #searchQueryInput {
+                margin: auto;
         }
 
-        #searchQueryInput {
-                width: 50%;
-                margin: auto;
-                margin-top: 2rem;
+        #searchQuerySubmit {
+                padding-top: 30px;
         }
 
         /* *************** SECTION HASTAG *************** */
@@ -397,8 +399,9 @@ input::placeholder {
         }
 
         .listHashtag ul {
+                margin-left: 2rem;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 height: 100%;
         }
@@ -408,7 +411,7 @@ input::placeholder {
         .create-list {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: center;
                 height: 65vh;
         }
 
@@ -418,17 +421,19 @@ input::placeholder {
                 width: 420px;
                 height: 60vh;
                 border: none;
-                margin: 0px;
+                margin: 0;
+                margin-right: 5rem;
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
-                background-position-x: 20px;
-                background-position-y: 2px;
+                background-size: 94%;
+                background-position-x: 28px;
+                background-position-y: 48px;
+                transform: translateY(-50px);
         }
 
         .createCrime .button{
-                height: 12.5;
-                height: 13%;
-                width: 255px;
-                border-radius: 25px;
+                height: 18%;
+                width: 245px;
+                border-radius: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -436,25 +441,37 @@ input::placeholder {
 
         .createCrime h1{
                 font-family: var(--h1-font);
-                font-size: 1.5rem;
+                font-size: 2rem;
                 text-align: center; 
+                transform: translateY(-30px);
+                
         }
 
         /* *************** SECTION LIST TITLE *************** */
         .listCrimes {
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items:center;
                 height: 60vh;
                 border: none;
-                margin: 0px;
+                margin: 0;
+                margin-left: 5rem;
                 background: center / contain no-repeat url(../images/Carnetlist-desk.svg);
+                background-size: 95%;
         }
 
         .listCrimes h1 {
+                margin: 0px;
+                width: 25%;
                 font-family: var(--h1-font);
                 font-size: var(--h1-size);
-                text-align: center; 
-                width: 50%;
-                margin-bottom: 10rem;
+        }
+
+        .listCrimes a{
+                display: inline-block;
+                margin-bottom: 1rem;
+                max-width: 60%;
+                align-self: flex-start;
         }
     }
 

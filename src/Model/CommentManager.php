@@ -15,6 +15,7 @@ class CommentManager extends AbstractManager
          VALUES (:name, :message)");
         $statement->bindValue('name', $sceneComments['name'], \PDO::PARAM_STR);
         $statement->bindValue('message', $sceneComments['message'], \PDO::PARAM_STR);
+        $statement->bindValue('crimescene_id', $sceneComments['crimescene_id'], \PDO::PARAM_INT);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }

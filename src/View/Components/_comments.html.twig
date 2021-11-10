@@ -1,0 +1,13 @@
+{% for comment in crimeSceneComments %}
+    {% if loop.index is even %}
+        {% set side = 'left' %}
+    {% else %}
+        {% set side = 'right' %}
+    {% endif %}
+    <div class="container">
+        <p>{{comment.message}}</p>
+        <span class="author-{{side}}">{{comment.name}}</span>
+        <span class="time-{{side}}">{{comment.date}}</span>
+    </div>
+{% endfor %}
+

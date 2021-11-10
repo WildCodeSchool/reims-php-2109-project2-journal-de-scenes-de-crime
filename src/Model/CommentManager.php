@@ -12,7 +12,7 @@ class CommentManager extends AbstractManager
     public function insert(array $sceneComments): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, message, crimescene_id)
-         VALUES (:name, :message, :crimescede_id)");
+         VALUES (:name, :message, :crimescene_id)");
         $statement->bindValue('name', $sceneComments['name'], \PDO::PARAM_STR);
         $statement->bindValue('message', $sceneComments['message'], \PDO::PARAM_STR);
         $statement->bindValue('crimescene_id', $sceneComments['crimescene_id'], \PDO::PARAM_INT);

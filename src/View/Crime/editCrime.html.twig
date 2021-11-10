@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+{% include 'Components/_header.html.twig' %}
+    {% include 'Components/_navBar.html.twig' %}
+    {% include 'Components/_hashtag.html.twig' %}
+    <h1>Edit {{ crimeScene.title }}</h1>
+    {% include 'Components/_formCrime.html.twig' %}
+    <a class="link-home formcrime" href="/crimes/show?id={{ crimeScene.id }}">Retour</a>
+{% endblock %}

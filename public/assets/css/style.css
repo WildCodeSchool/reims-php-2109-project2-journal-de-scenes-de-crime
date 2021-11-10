@@ -426,7 +426,7 @@ input::placeholder {
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
                 background-size: 94%;
                 background-position-x: 28px;
-                background-position-y: 48px;
+                background-position-y: -38px;
                 transform: translateY(-50px);
         }
 

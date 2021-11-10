@@ -426,8 +426,8 @@ input::placeholder {
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
                 background-size: 94%;
                 background-position-x: 28px;
-                background-position-y: -38px;
-                transform: translateY(-50px);
+                background-position-y: 5px;
+                transform: translateY(-35px);
         }
 
         .createCrime .button{
@@ -437,11 +437,12 @@ input::placeholder {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: 2rem;
         }
 
         .createCrime h1{
                 font-family: var(--h1-font);
-                font-size: 2rem;
+                font-size: 30px;
                 text-align: center; 
                 transform: translateY(-30px);
                 

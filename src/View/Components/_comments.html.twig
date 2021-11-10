@@ -4,8 +4,9 @@
     {% else %}
         {% set side = 'right' %}
     {% endif %}
-    <div class="container">
-        <p>{{comment.message}}</p>
+    <div class="commentContainer">
+        <p class="message-{{side}}">{{comment.message}}</p>
+        <br>
         <span class="author-{{side}}">{{comment.name}}</span>
         <span class="time-{{side}}">{{comment.date}}</span>
     </div>

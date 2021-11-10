@@ -1,30 +1,27 @@
 
-<section>
-        <h1> {{crimeScene.title}} </h1>
+<section class= "displayCrimeScene">
+        <h1 class= "crimeSceneTitle"> {{crimeScene.title}} </h1>
+
     <div>
-        <p> <span> Auteur :</span> {{crimeScene.name}} </p>
+        <p class="adresse"> <span class="adresseTitle"> L'adresse de la scéne  : </span><br> {{crimeScene.adress}} </p>
     </div>
 
     <div>
-        <time> <span> Date :</span> {{crimeScene.date}} </time>
+        <p class="victime"> <span class="victimeTitle">La victime est :</span><br> {{crimeScene.victim}} </p>
     </div>
     
+    <div class = "descritioncontainer">
+        <p class="descrition"> {{crimeScene.description}} </p>
+    </div>
     <div>
-        <p> <span> Adresse : </span> {{crimeScene.adress}} </p>
+        <p class="auteur"> <span class="auteurTitle"> Auteur :</span> {{crimeScene.name}} </p>
     </div>
 
     <div>
-        <p> <span> Victime </span> : {{crimeScene.victim}} </p>
+        <time class="date"> <span class="dateTitle"> Date :</span> {{crimeScene.date}} </time>
     </div>
-    
-    <div>
-        <span> Description du meurtre :</span>
-        <p> {{crimeScene.description}} </p>
-    </div>
-
     <div> 
-        <a href="/crimes/edit?id={{ crimeScene.id }}"> Edit </a>
+        <a class="editButton" href="/crimes/edit?id={{ crimeScene.id }}"> Edit </a>
     </div>
 
-    <a href="/">Retour à l'accueil</a>
 </section>

@@ -57,25 +57,15 @@ h2 {
         text-align: center; 
 }
 
-h4 {
-        font-family: var(--h4-font);
-        font-size: var(--h4-size);  
-        text-align: center; 
-}
-
-
-/* *************** HEADER *************** */
+/* *************** HEADER NAVBAR SEARCHBAR*************** */
 .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         color: var(--secondary-color);
         font-family: var(--h1-font);
 }
 
 .logo {
         font-family: var(--h1-font);
-        width: 30%;
+        width: 25%;
         margin-top: 0.7rem;
 }
 
@@ -83,32 +73,19 @@ h4 {
         text-align: center;
 }
 
-
-
 /* *************** NAVBAR *************** */
 
 .navbar { 
         width: 75%;
         margin: auto;
         height: 10vh;
-        display: flex;
-        justify-content: center;
-}
-
-.styleNav {
-        display: flex;
-        flex-direction: column;
 }
 
 /* *************** SEARCHBAR *************** */
-
-.wrapper {
-        width: 100%;
-        margin: 0,5rem auto;
-}
       
 .searchBar {
-        width: 100%;
+        width: 80%;
+        margin: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -127,6 +104,7 @@ input::placeholder {
         padding: 0 3.5rem 0 1.5rem;
         font-size: 1rem;
         text-align: center;
+        margin-bottom: 2rem;
 
 }
       
@@ -137,6 +115,7 @@ input::placeholder {
         background: none;
         border: none;
         outline: none;
+        padding-bottom: 55px;
 }
       
 #searchQuerySubmit:hover {
@@ -150,9 +129,10 @@ input::placeholder {
 
 /* *************** SECTION HASTAG *************** */
 .listHashtag {
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-top: 1px solid var(--dark);
+        border-bottom: 1px solid var(--dark);
         margin-bottom: 1.7rem;
+        margin-left: 2rem;
 
 }
 
@@ -168,7 +148,7 @@ input::placeholder {
 
 .listHashtag a {
         text-decoration: none;
-        color: #14030d;
+        color: var(--dark);
         font-family:var(--text-font);
         font-size: var(--text-size)
 }
@@ -186,30 +166,30 @@ input::placeholder {
         border-radius: 40px;
 }
 .createCrime h1 {
-        font-family: AmericanTypewriter;
         font-size: 2rem;
-        color: #14030d;
-        margin-bottom: 0.5rem;
 }
 
-.createCrime a {
-        text-decoration: none;
+.createCrime .button{
         text-align: center;
-        background:#A5593C;
-        border: none;
-        color: #FFF;
+        background: var(--secondary-color);
         border-radius: 40px;
+        padding: 1rem;
+        width: 40%;
+}
+
+.createCrime a{
+        text-decoration: none;
+        color: var(--third-color);
         padding: 1rem;
         font-family: AmericanTypewriter;
         font-size: 1rem;
-        width: 40%;
 }
 
 /* *************** SECTION LIST TITLE *************** */
 
 .listCrimes {
         margin: auto;
-        border: 1px solid #A5593C;
+        border: 1px solid var(--secondary-color);
         width: 85%;
         border-radius: 40px;
         margin-top: 1.6rem;
@@ -219,24 +199,28 @@ input::placeholder {
         justify-content: center;
         font-family: AmericanTypewriter;
         font-size: 1rem;
-        color:#A5593C;
+        color: var(--secondary-color);
 }
 
 .listCrimes h1 {
         font-family: AmericanTypewriter;
         font-size: 2rem;
-        color: #14030d;
+        color: var(--dark);
 }
 .listCrimes li {
         list-style-type: none;
-        color: #A5593C;
+        color: var(--secondary-color);
         text-align: center;
 }
 .listCrimes a {
         text-decoration: none;
         font-size: var(--text-size);
-        color: #A5593C;
+        color: var(--secondary-color);
         text-align: center;
+}
+
+.img-ipad {
+        display: none;
 }
 
 /* *************** SECTION FORM CREATE CRIME *************** */
@@ -248,7 +232,7 @@ input::placeholder {
         margin: auto;
         padding: 0.5rem;
         width: 75vw;
-        border-radius: 20vh;
+        border-radius: 20px;
 }
 
 .formcrime label{
@@ -259,34 +243,21 @@ input::placeholder {
         align-items: center;
         margin: auto;
         padding: 0.5rem;
-        width: 75vw;
-        border-radius: 20vh;
 }
 
 .formcrime input{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: auto;
         padding: 0.5rem;
         width: 75vw;
-        display: block;
-        font-size: 1rem;
+        font-size: var(--text-size);
         background: none;
         line-height: 0,5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0.4rem;
         border: none;
         border-bottom: 1px solid rgba(0,0,0,1);
-        min-width: 250px;
-        padding-left: 5px;
         outline: none;
-        color: rgba(0,0,0,1);
+        color: var(--dark);
 }
 .formcrime textarea{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: auto;
         padding: 0.5rem;
         width: 75vw;
         border-radius: 10px;
@@ -305,7 +276,7 @@ input::placeholder {
         font-size: var(--text-size);
         width: 60%;
         padding: 5px;
-        border-radius: 0.4rem;
+        border-radius: 4px;
         border: none;
 }
 
@@ -320,17 +291,46 @@ input::placeholder {
 /* Small devices (landscape phones, 576px and up)  */
 
 @media (min-width: 576px) {
+
         /* *************** HEADER *************** */
-        /* *************** NAVBAR *************** */
+        .titleLayout {
+                display: block;
+        }
+
+        .img-ipad {
+                display: initial;
+                width: 100px;
+                margin: auto;
+        }
+
+        .searchBar {
+                width: 70%;
+        }
         /* *************** SECTION HASTAG *************** */
 
 
-        .list-create {
+        /* JOIN CREATE AND LIST */
+        .create-list {
+                width: 100vw;
+                height: 55vh;
                 display: flex;
+                justify-content: space-around;
+                margin: auto;
+        }
+        /* *************** SECTION CREATE CRIME *************** */
+
+        .createCrime {
+                width: 40%;
+                margin: auto;
         }
 
         /* *************** SECTION LIST TITLE *************** */
-        /* *************** SECTION CREATE CRIME *************** */
+
+        .listCrimes {
+                width: 40%;
+                margin: auto;
+        }
+
     }
     
     /* Medium devices (tablets, 768px and up) */
@@ -347,12 +347,135 @@ input::placeholder {
     
     @media (min-width: 992px) {
          /* *************** HEADER *************** */
-        /* *************** NAVBAR *************** */
+        
+        .img-ipad {
+                display: none;
+        }
+
+        .header {
+                display: grid;
+                grid-template-columns: 0.5fr 2fr;
+        }
+
+        .title {
+                margin-top: 3rem;
+                margin-bottom: 4rem;
+        }
+
+        .titleLayout {
+                display: inline;
+        }
+
+        .nav-title {
+                width: 100%;
+                grid-column: 2;
+                margin-right: 2rem;
+        }
+
+        .logocontainer {
+                grid-column: 1;
+                max-width: 80%;
+                margin-left: 1rem;
+        }
+
+        .logo {
+                margin-top: 2rem;
+                width: 70%;
+        }
+
+        #searchQueryInput {
+                margin: auto;
+        }
+
+        #searchQuerySubmit {
+                padding-top: 30px;
+        }
+
         /* *************** SECTION HASTAG *************** */
-        /* *************** SECTION LIST TITLE *************** */
+        .body {
+                display: flex;
+                flex-direction: row;
+                margin-top: 3rem;
+        }
+
+        .listHashtag ul {
+                margin-left: 2rem;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+        }
+
+        /* JOIN CREATE AND LIST */
+
+        .create-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 65vh;
+        }
+
         /* *************** SECTION CREATE CRIME *************** */
+        .createCrime {
+                justify-content: center;
+                width: 420px;
+                height: 60vh;
+                border: none;
+                margin: 0;
+                margin-right: 5rem;
+                background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
+                background-size: 94%;
+                background-position-x: 28px;
+                background-position-y: 5px;
+                transform: translateY(-35px);
+        }
+
+        .createCrime .button{
+                height: 18%;
+                width: 245px;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+        }
+
+        .createCrime h1{
+                font-family: var(--h1-font);
+                font-size: 30px;
+                text-align: center; 
+                transform: translateY(-30px);
+                
+        }
+
+        /* *************** SECTION LIST TITLE *************** */
+        .listCrimes {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items:center;
+                height: 60vh;
+                border: none;
+                margin: 0;
+                margin-left: 5rem;
+                background: center / contain no-repeat url(../images/Carnetlist-desk.svg);
+                background-size: 95%;
+        }
+
+        .listCrimes h1 {
+                margin: 0px;
+                width: 25%;
+                font-family: var(--h1-font);
+                font-size: var(--h1-size);
+        }
+
+        .listCrimes a{
+                display: inline-block;
+                margin-bottom: 1rem;
+                max-width: 60%;
+                align-self: flex-start;
+        }
     }
-    
+
     /* X-Large devices (large desktops, 1200px and up) */
     
     @media (min-width: 1200px) {

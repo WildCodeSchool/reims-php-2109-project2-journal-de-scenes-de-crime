@@ -171,7 +171,6 @@ input::placeholder {
 
 .createCrime .button{
         text-align: center;
-        background: var(--secondary-color);
         border-radius: 40px;
         padding: 1rem;
         width: 40%;
@@ -179,10 +178,11 @@ input::placeholder {
 
 .createCrime a{
         text-decoration: none;
-        color: var(--third-color);
+        color: #A5593C;
         padding: 1rem;
         font-family: AmericanTypewriter;
         font-size: 1rem;
+        margin-bottom: 2rem;
 }
 
 /* *************** SECTION LIST TITLE *************** */
@@ -419,15 +419,16 @@ input::placeholder {
         .createCrime {
                 justify-content: center;
                 width: 420px;
-                height: 60vh;
+                min-width: 420px;
+                height: 600px;
                 border: none;
                 margin: 0;
                 margin-right: 5rem;
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
                 background-size: 94%;
                 background-position-x: 28px;
-                background-position-y: 5px;
-                transform: translateY(-35px);
+                background-position-y: 8px;
+                transform: translateY(-30px);
         }
 
         .createCrime .button{
@@ -453,12 +454,12 @@ input::placeholder {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items:center;
-                height: 60vh;
+                height: 600px;
                 border: none;
                 margin: 0;
                 margin-left: 5rem;
                 background: center / contain no-repeat url(../images/Carnetlist-desk.svg);
-                background-size: 95%;
+                
         }
 
         .listCrimes h1 {

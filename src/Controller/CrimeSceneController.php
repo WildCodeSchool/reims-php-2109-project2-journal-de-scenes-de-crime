@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Model\CrimeSceneManager;
 use App\Model\CommentManager;
+use App\Model\CrimeSceneHashtagManager;
+use App\Model\HashtagManager;
 
 class CrimeSceneController extends AbstractController
 {
@@ -27,10 +29,40 @@ class CrimeSceneController extends AbstractController
 
             // if validation is ok, insert and redirection
             $id = $crimeSceneManager->insert($crimeScene);
+            $this->extractHashtags($id, $crimeScene['description']);
             header('Location:/crimes/show?id=' . $id);
         }
 
         return $this->twig->render('Crime/createCrime.html.twig');
+    }
+
+    private function extractHashtags(int $crimeSceneId, string $text)
+    {
+        $hashtagManager = new HashtagManager();
+        $crimeSceneTagManager = new CrimeSceneHashtagManager();
+
+        $matches = [];
+        $keywords = [];
+        preg_match_all("/(#[A-Za-z0-9\-]+)/u", $text, $matches);
+        if ($matches) {
+            $hashtagsArray = array_count_values($matches[0]);
+            $keywords = array_keys($hashtagsArray);
+        }
+
+        foreach ($keywords as $keyword) {
+            $keyword = substr($keyword, 1);
+            $existingHashtag = $hashtagManager->selectOneByKeyword($keyword);
+            if ($existingHashtag) {
+                $hashtagId = $existingHashtag['id'];
+            } else {
+                $hashtagId = $hashtagManager->insert(['keyword' => $keyword]);
+            }
+
+            $crimeSceneTagManager->insert([
+                'crimescene_id' => $crimeSceneId,
+                'hashtag_id' => $hashtagId,
+            ]);
+        }
     }
 
     public function show(int $id): string
@@ -44,6 +76,7 @@ class CrimeSceneController extends AbstractController
             // créer un commentaire associé à $id
             $newComment['crimescene_id'] = $id;
             $commentManager->insert($newComment);
+            $this->extractHashtags($id, $newComment['message']);
 
             header('Location:/crimes/show?id=' . $id);
         }

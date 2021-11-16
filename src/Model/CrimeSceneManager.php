@@ -54,7 +54,7 @@ class CrimeSceneManager extends AbstractManager
      */
     public function search(string $q): array
     {
-        $statement = $this->pdo->prepare("SELECT * FROM ". static::TABLE . " WHERE title LIKE :q
+        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE title LIKE :q
         OR description LIKE :q OR name LIKE :q OR adress LIKE :q OR date LIKE :q OR victim LIKE :q");
         $statement->bindValue('q', "%$q%", \PDO::PARAM_STR);
         $statement->execute();

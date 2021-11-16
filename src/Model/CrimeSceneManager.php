@@ -49,4 +49,15 @@ class CrimeSceneManager extends AbstractManager
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+    /**
+     * Search in crime scene
+     */
+    public function search(string $q): array
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM ". static::TABLE . " WHERE title LIKE :q
+        OR description LIKE :q OR name LIKE :q OR adress LIKE :q OR date LIKE :q OR victim LIKE :q");
+        $statement->bindValue('q', "%$q%", \PDO::PARAM_STR);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }

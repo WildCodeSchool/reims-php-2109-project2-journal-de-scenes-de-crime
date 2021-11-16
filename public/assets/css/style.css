@@ -640,7 +640,6 @@ input::placeholder {
                 font-size: 30px;
                 text-align: center; 
                 transform: translateY(-30px);
-                
         }
 
         /* *************** SECTION LIST TITLE *************** */
@@ -648,7 +647,11 @@ input::placeholder {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items:center;
+
+                width: 650px;
+                min-width: 420px;
                 height: 600px;
+
                 border: none;
                 margin: 0;
                 margin-left: 5rem;

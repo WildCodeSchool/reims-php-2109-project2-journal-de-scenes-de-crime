@@ -79,4 +79,12 @@ class CrimeSceneController extends AbstractController
             'crimeScene' => $crimeScene,
         ]);
     }
+
+    public function search(): string
+    {
+        $crimeSceneManager = new CrimeSceneManager();
+        $titles = $crimeSceneManager->selectAll();
+
+        return $this->twig->render('Crime/searchResults.html.twig', ['titles' => $titles]);
+    }
 }

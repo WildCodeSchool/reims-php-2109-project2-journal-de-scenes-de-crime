@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Création de la BDD "sherlock"
 --
-
+DROP DATABASE IF EXISTS sherlock;
 CREATE DATABASE sherlock; 
 
 --
@@ -54,7 +54,6 @@ CREATE TABLE `crime_scene` (
 
 CREATE TABLE `hashtag` (
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `keynumber` varchar(50),
   `keyword` varchar(50)
 );
 
@@ -66,17 +65,19 @@ CREATE TABLE `comment` (
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(50) NOT NULL,
   `message` varchar(255) NOT NULL,
-  `date` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  crimescene_id INT NOT NULL,
+  FOREIGN KEY (crimescene_id) REFERENCES crime_scene(id)
 );
 
 --
--- Structure de la table `user`
+-- Structure de la table `crime_scene_hashtag`
 --
 
-CREATE TABLE `user` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL
+CREATE TABLE `crime_scene_hashtag` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  crimescene_id INT NOT NULL,
+  FOREIGN KEY (crimescene_id) REFERENCES crime_scene(id),
+  hashtag_id INT NOT NULL,
+  FOREIGN KEY (hashtag_id) REFERENCES hashtag(id)
 );
-
-ALTER TABLE comment ADD crimescene_id INT;
-
-ALTER TABLE comment ADD FOREIGN KEY (crimescene_id) REFERENCES crime_scene(id);

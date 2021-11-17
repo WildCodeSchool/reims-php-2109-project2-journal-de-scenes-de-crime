@@ -56,8 +56,8 @@ class CrimeSceneManager extends AbstractManager
     {
         $statement = $this->pdo->prepare("SELECT crime_scene.id, title, description, name, date, adress, victim, 
         GROUP_CONCAT(keyword) FROM " . static::TABLE .
-        " join crime_scene_hashtag on crime_scene.id = crime_scene_hashtag.crimescene_id" .
-        " join hashtag on crime_scene_hashtag.hashtag_id = hashtag.id " .
+        " LEFT join crime_scene_hashtag on crime_scene.id = crime_scene_hashtag.crimescene_id" .
+        " LEFT join hashtag on crime_scene_hashtag.hashtag_id = hashtag.id " .
         " WHERE title LIKE :q OR description LIKE :q OR name LIKE :q OR adress 
         LIKE :q OR date LIKE :q OR victim LIKE :q OR keyword LIKE :q group by crime_scene.id");
         $statement->bindValue('q', "%$query%", \PDO::PARAM_STR);

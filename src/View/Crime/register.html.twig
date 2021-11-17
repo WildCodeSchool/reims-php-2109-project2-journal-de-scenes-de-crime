@@ -1,0 +1,5 @@
+<ul id="crime_scene">
+    {% for title in titles %}
+    <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+    {% endfor %}
+</ul>

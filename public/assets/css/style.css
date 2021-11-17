@@ -348,7 +348,7 @@ input::placeholder {
 }
 .editButton{
         margin: auto;
-        width: 25vw;
+        width: 25%;
         text-decoration: none;
         text-align: center;
         background: #c2bcaa;
@@ -440,7 +440,7 @@ input::placeholder {
         color: var(--text-font);
         font-size: 1em;
         line-height: 1.75;
-        padding: 15px 25px;
+        padding: 0.5rem 0.5rem;
         margin-bottom: 1.5rem;
         margin-top: 1rem;
         cursor: default;
@@ -454,7 +454,7 @@ input::placeholder {
         color: var(--text-font);
         font-size: 1em;
         line-height: 1.75;
-        padding: 15px 25px;
+        padding: 0.5rem 0.5rem;
         margin-bottom: 1.5rem;
         margin-top: 1rem;
         cursor: default;

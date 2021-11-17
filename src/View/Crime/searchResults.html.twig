@@ -2,14 +2,16 @@
 
 {% block content %}
     {% include 'Components/_header.html.twig' %}
-    <section class="crimesResults">
-        <img class="img-ipad" src="/assets/images/Carnetcreate-desk.svg" alt="carnet">
-        <h1>Résults</h1>
-        <ul id="crime_scene">
-            {% for title in titles %}
-                <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
-            {% endfor %}
-        </ul>
-    </section>
+    <div class="body">
+        {% include 'Components/_hashtag.html.twig' %}
+        <section class="crimesResults">
+            <h1>Résults</h1>
+            <ul id="crime_scene">
+                {% for title in titles %}
+                    <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>    
 {% endblock %}
 

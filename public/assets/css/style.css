@@ -591,15 +591,16 @@ input::placeholder {
                 flex-direction: row;
                 margin-top: 3rem;
         }
-
-        .listHashtag ul {
-                margin-left: 2rem;
+        .listhashtaghome .listHashtag ul{
+                margin: 2rem;
+                display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                height: 100%;
         }
-
+        .hashtagdesktop .listHashtag ul{
+                display: flex;
+                flex-direction: row;
+        }
+        
         /* JOIN CREATE AND LIST */
 
         .create-list {
@@ -669,6 +670,8 @@ input::placeholder {
                 max-width: 60%;
                 align-self: flex-start;
         }
+        
+
     }
 
     /* X-Large devices (large desktops, 1200px and up) */
@@ -723,8 +726,51 @@ input::placeholder {
         .createCrime h1{
                 transform: translateY(-80px);
         }
+        .displayCrimeScene{
+                padding-top: 10rem;
+                background: no-repeat url(../images/Carnet-anneaux.svg);
+                margin-left: 2rem;
+                padding-left: 8rem;
+                margin-right: 2rem;
+                padding-right: 8rem;
+        }
+        .crimeSceneTitle{
+                margin-bottom: 3rem;
+        }
+        .descrition{
+                font-size: 40px;
+        }
+        .dateTitle{
+                float: right;
+                font-size: large;
+        }
+        .adresse{
+                font-size: 30px;
+        }
+        .adresseTitle{
+                float: left;
+        }
+        .victime{
+                font-size: 30px;
+        }
+        .victimeTitle{
+                float: left;
+        }
+        .auteur{
+                font-size: 30px;
+        }
+        .auteurTitle{
+                font-size: large;
+                float: right;
+        }
+        .date{
+                font-size: 30px;
+        }
+        .editbuttondiv{
+                margin: 5rem;
+        }
         /* *************** SECTION HASTAG *************** */
-    }
+}
     /* XX-Large devices (larger desktops, 1400px and up) */
     
     @media (min-width: 1400px) {

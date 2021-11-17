@@ -14,13 +14,13 @@
         <p class="descrition"> {{crimeScene.description}} </p>
     </div>
     <div>
-        <p class="auteur"> <span class="auteurTitle"> Auteur :</span> {{crimeScene.name}} </p>
+        <p class ="auteur"> <span class="auteurTitle"> Auteur :</span><br> {{crimeScene.name}} </p>
     </div>
 
-    <div>
-        <time class="date"> <span class="dateTitle"> Date :</span> {{crimeScene.date}} </time>
+    <div class = "datetime">
+        <time class="date"> <span class="dateTitle"> Date :</span><br> {{crimeScene.date}} </time>
     </div>
-    <div> 
+    <div class = "editbuttondiv"> 
         <a class="editButton" href="/crimes/edit?id={{ crimeScene.id }}"> Edit </a>
     </div>
 

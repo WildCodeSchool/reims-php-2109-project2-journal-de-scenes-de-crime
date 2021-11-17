@@ -675,9 +675,54 @@ input::placeholder {
     
     @media (min-width: 1200px) {
         /* *************** HEADER *************** */
+        .title{
+                font-size: 4em;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+        }
+        .title h1{
+                margin-bottom: 0;
+        }
+        .logo{
+                margin-left: 3rem
+        }
         /* *************** NAVBAR *************** */
+        #searchQueryInput{
+                width: 50rem;
+        }
+        .nav-title{
+                margin-right: unset;
+        }
         /* *************** SECTION LIST TITLE *************** */
+        .createCrime{
+                margin-top: 7rem;
+                margin-right: 0;
+        }
+        .listCrimes{
+                background:no-repeat url(../images/Carnet-anneaux.svg);
+                height: 540px;
+                margin-left:2rem;
+        }
+        .listCrimes h1{
+                margin: 1rem;
+                font-size: 40px;
+        }
+        .listCrimes a{
+                max-width: 80%;
+        }
         /* *************** SECTION CREATE CRIME *************** */
+        .formcrime{
+                background:no-repeat url(../images/Carnet-anneaux.svg);
+                padding-top: 10rem;
+                width: 100vw;
+                margin-top: 1rem;
+        }
+        .createCrime a{
+                margin-bottom: 10rem;
+        }
+        .createCrime h1{
+                transform: translateY(-80px);
+        }
         /* *************** SECTION HASTAG *************** */
     }
     /* XX-Large devices (larger desktops, 1400px and up) */
@@ -687,5 +732,6 @@ input::placeholder {
         /* *************** NAVBAR *************** */
         /* *************** SECTION HASTAG *************** */
         /* *************** SECTION LIST TITLE *************** */
+
         /* *************** SECTION CREATE CRIME *************** */
     }

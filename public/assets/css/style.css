@@ -157,14 +157,14 @@ input::placeholder {
 /* *************** SECTION CREATE CRIME *************** */
 
 .createCrime {
+        background-color: var(--secondary-color);
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: auto;
         padding: 0.5rem;
-        border: 1px solid #A5593C;
         width: 85%;
-        border-radius: 40px;
+        border-radius: 100px;
 }
 .createCrime h1 {
         font-size: 2rem;
@@ -178,21 +178,20 @@ input::placeholder {
 }
 
 .createCrime a{
+        font-size: var(--h2-size);
         text-decoration: none;
-        color: #A5593C;
+        color: #ffffff;
         padding: 1rem;
         font-family: AmericanTypewriter;
-        font-size: 1rem;
-        margin-bottom: 2rem;
 }
 
 /* *************** SECTION LIST TITLE *************** */
 
 .listCrimes {
+        background-color: var(--secondary-color);
         margin: auto;
-        border: 1px solid var(--secondary-color);
         width: 85%;
-        border-radius: 40px;
+        border-radius: 100px;
         margin-top: 1.6rem;
         padding: 0.5rem;
         display: flex;
@@ -204,20 +203,24 @@ input::placeholder {
 }
 
 .listCrimes h1 {
-        font-family: AmericanTypewriter;
         font-size: 2rem;
-        color: var(--dark);
+        color: var(--third-color);
 }
 .listCrimes li {
         list-style-type: none;
         color: var(--secondary-color);
         text-align: center;
 }
+
 .listCrimes a {
         text-decoration: none;
         font-size: var(--text-size);
-        color: var(--secondary-color);
+        color: var(--dark);
         text-align: center;
+}
+
+.listCrimes a:hover{
+        color: #fffae8;
 }
 
 .img-ipad {
@@ -523,7 +526,7 @@ input::placeholder {
         /* JOIN CREATE AND LIST */
         .create-list {
                 width: 100vw;
-                height: 55vh;
+                height: auto;
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
@@ -531,8 +534,13 @@ input::placeholder {
         /* *************** SECTION CREATE CRIME *************** */
 
         .createCrime {
+                border-radius: 10px;
                 width: 40%;
+                height: 25vh;
                 margin: auto;
+                color: var(--dark);
+                justify-content: center;
+
         }
 
         /* *************** SECTION LIST TITLE *************** */
@@ -540,6 +548,7 @@ input::placeholder {
         .listCrimes {
                 width: 40%;
                 margin: auto;
+                border-radius: 10px;
         }
 
     }

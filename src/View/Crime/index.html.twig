@@ -6,13 +6,14 @@
         {% include 'Components/_hashtag.html.twig' %}
         <div class="create-list">
             <section class="createCrime">
-                <h1>Créez votre scène<br>de crime</h1>
-                <span class="button"> <a href="/crimes/add"> Créez </a> </span>
+             <a href="/crimes/add"> Créez </a>
+
+                <p>Créez votre scène de crime</p>
             </section>
 
             <section class="listCrimes">
                 <img class="img-ipad" src="/assets/images/Carnetcreate-desk.svg" alt="carnet">
-                <h1>Les scènes<br>de crime</h1>
+                <h1>Répertoire</h1>
                 <ul id="crime_scene">
                     {% for title in titles %}
                     <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>

@@ -93,7 +93,7 @@ INSERT INTO crime_scene
     VALUES 
     (
     "Watson",
-    "Le mysthère de la chambre rouge",
+    "Le mystère de la chambre rouge",
     "3 Lauriston Gardens Londres",
     "C’était le cadavre d’un homme d’environ quarante-trois ans, de taille moyenne, avec des cheveux noirs et une barbe de trois jours. L’agonie avait dû être douloureuse ! Son visage rigide conservait une expression d’horreur.",
     "2021-01-01",

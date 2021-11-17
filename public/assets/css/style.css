@@ -526,29 +526,45 @@ input::placeholder {
         /* JOIN CREATE AND LIST */
         .create-list {
                 width: 100vw;
-                height: auto;
+                height: 35vh;
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
+                border: 1px solid black;
         }
         /* *************** SECTION CREATE CRIME *************** */
 
         .createCrime {
+                height: 20vh;
+                border: 1px solid var(--secondary-color);
+                background-color: transparent;
                 border-radius: 10px;
                 width: 40%;
-                height: 25vh;
-                margin: auto;
                 color: var(--dark);
-                justify-content: center;
+                align-items: center;
+        }
 
+        .createCrime a {
+                color: var(--secondary-color);
         }
 
         /* *************** SECTION LIST TITLE *************** */
 
         .listCrimes {
+                background-color: transparent;
+                background-color: none;
                 width: 40%;
-                margin: auto;
+                height: 30vh;
+                border: 1px solid var(--secondary-color);
                 border-radius: 10px;
+        }
+
+        .listCrimes h1 {
+                color: var(--dark);
+        }
+
+        .listCrimes a {
+                color: var(--secondary-color);
         }
 
     }

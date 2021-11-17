@@ -1,5 +1,15 @@
-<ul id="crime_scene">
-    {% for title in titles %}
-    <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
-    {% endfor %}
-</ul>
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+        {% include 'Components/_header.html.twig' %}
+    <div class="body">
+        {% include 'Components/_hashtag.html.twig' %}
+
+        <ul id="crime_scene">
+            {% for title in titles %}
+            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+{% endblock %}

@@ -638,6 +638,8 @@ input::placeholder {
                 margin: 2rem;
                 display: flex;
                 flex-direction: column;
+                padding: 2rem;
+                
         }
         .hashtagdesktop .listHashtag ul{
                 display: flex;
@@ -741,27 +743,30 @@ input::placeholder {
         }
         /* *************** SECTION LIST TITLE *************** */
         .listCrimes{
-                background:no-repeat url(../images/Carnet-anneaux.svg);
-                height: 540px;
-                margin-left:2rem;
+                background:no-repeat url(../images/Carnetcreate.svg);
+                margin-left: 0rem;
         }
-        .listCrimes h1{
-                margin: 1rem;
-                font-size: 40px;
-        }
-        .listCrimes a{
-                max-width: 80%;
+        .listCrimes a {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 0;
+                max-width: none;
+                font-size: 50px;
         }
         /* *************** SECTION CREATE CRIME *************** */
+        .createCrime{
+                transform: none;
+        }
+        .createCrime h1{
+                transform:none;
+                font-size: 50px;
+        }
         .ringImg{
                 width: 100%;
         }
         .formcrime{
                 width: 100%;
                 margin-top: 1rem;
-        }
-        .createCrime h1{
-                transform: translateY(-80px);
         }
         .createCrime .button{
                height : 30%;

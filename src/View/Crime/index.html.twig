@@ -3,7 +3,9 @@
 {% block content %}
         {% include 'Components/_header.html.twig' %}
     <div class="body">
-        {% include 'Components/_hashtag.html.twig' %}
+        <div class="listhashtaghome">
+            {% include 'Components/_hashtag.html.twig' %}
+        </div>
         <div class="create-list">
             <section class="createCrime">
                 <a href="/crimes/add">

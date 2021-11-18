@@ -136,9 +136,8 @@ input::placeholder {
 .listHashtag {
         border-top: 1px solid var(--dark);
         border-bottom: 1px solid var(--dark);
-        margin-bottom: 1rem;
+        margin: 1rem;
         margin-left: 2rem;
-        justify-content: space-around;
         margin-right: 2rem;
 }
 
@@ -158,34 +157,37 @@ input::placeholder {
         font-family:var(--text-font);
         font-size: var(--text-size)
 }
-
+/* *************** SECTION CREATE LIST *************** */
+.create-list {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-content: space-between;
+}
 /* *************** SECTION CREATE CRIME *************** */
 
 .createCrime {
         background-color: var(--secondary-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin: auto;
         padding: 0.5rem;
         width: 85%;
         border-radius: 100px;
+        margin-bottom: 1rem;
 }
 .createCrime h1 {
         font-size: 2rem;
 }
 
-.createCrime .button{
+/* .createCrime .button{
         text-align: center;
         border-radius: 40px;
         margin: 1rem;
         width: 40%;
-}
+} */
 
 .createCrime a{
         font-size: var(--h2-size);
         text-decoration: none;
-        color: #ffffff;
         font-family: AmericanTypewriter;
 }
 
@@ -193,14 +195,10 @@ input::placeholder {
 
 .listCrimes {
         background-color: var(--secondary-color);
-        margin: 1rem;
+        margin: auto;
         width: 85%;
         border-radius: 100px;
-        margin: 1rem;
         padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         font-family: AmericanTypewriter;
         font-size: 1rem;
         color: var(--secondary-color);
@@ -208,7 +206,7 @@ input::placeholder {
 
 .listCrimes h1 {
         font-size: 2rem;
-        color: var(--third-color);
+        color: var(--main-color);
 }
 .listCrimes li {
         list-style-type: none;
@@ -243,7 +241,7 @@ input::placeholder {
         border-radius: 20px;
 }
 .ringImg{
-        width: 150%;
+        width: 100%;
 }
 
 .formcrime label{
@@ -296,16 +294,20 @@ input::placeholder {
         color: var(--secondary-color);
 }
 /* *************** SECTION CRIME REGISTER *************** */
-
+.registerTitle {
+       font-size: var(--h2-size); 
+}
 .crime_register {
         font-size: var(--h4-size);
         font-family: AmericanTypewriter;
         display: flex;
         flex-direction: column;
         align-items: center;
-        list-style-type: none;
+        list-style: none;
 }
-
+.crime_register li{
+        list-style: none;
+}
 .crime_register a{
         text-decoration:none;
         color: #A5593C;
@@ -318,23 +320,28 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         align-items: center;
-        list-style-type: none;
+        list-style: none;
 }
-
-.crimeResults li {
-        text-decoration: none;
+.crimesResults li{
+        list-style: none;
+}
+.crimesResults a{
+        text-decoration:none;
         color: #A5593C;
 }
-
+.crimesResults h1{
+        font-size : var(--h2-size);
+}
 /* *************** SECTION CRIME SCENE *************** */
 .displayCrimeScene{
         display: flex;
         flex-direction: column;
+        align-items: center;
 }
 .crimeSceneTitle{
         color: var(--secondary-color);
         font-family: var(--h1-font);
-        font-size: var(--h1-size);
+        font-size: var(--h2-size);
         text-align: center;
         margin: 1rem; 
 }
@@ -386,6 +393,9 @@ input::placeholder {
         font-size: x-large;
         text-align: center;
         margin: 1rem;
+}
+.editbuttondiv{
+        padding: 3rem;
 }
 .editButton{
         margin: auto;
@@ -545,9 +555,17 @@ input::placeholder {
 @media (min-width: 576px) {
 
         /* *************** HEADER *************** */
-        .titleLayout {
-                display: block;
+
+        .logocontainer {
+                margin: 3rem;
         }
+        .logo {
+                width: 25%;
+                margin-top: 0.7rem;
+        }
+        /* .titleLayout {
+                display: block;
+        } */
 
         .img-ipad {
                 display: initial;
@@ -650,7 +668,6 @@ input::placeholder {
                 max-width: 80%;
                 margin-left: 1rem;
         }
-
         .logo {
                 margin-top: 2rem;
                 width: 70%;

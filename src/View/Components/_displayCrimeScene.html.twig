@@ -1,25 +1,29 @@
 
 <section class= "displayCrimeScene">
+    <div class="ringImg">
+        <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note"/>
+    </div>
         <h1 class= "crimeSceneTitle"> {{crimeScene.title}} </h1>
 
     <div>
-        <p class="adresse"> <span class="adresseTitle"> L'adresse de la scéne  : </span><br> {{crimeScene.adress}} </p>
+        <p class="adresse"> <span class="adresseTitle"> L'adresse de la scéne  : </span> {{crimeScene.adress}} </p>
     </div>
 
     <div>
-        <p class="victime"> <span class="victimeTitle">La victime est :</span><br> {{crimeScene.victim}} </p>
+        <p class="victime"> <span class="victimeTitle">La victime est :</span> {{crimeScene.victim}} </p>
     </div>
     
     <div class = "descritioncontainer">
         <p class="descrition"> {{crimeScene.description}} </p>
     </div>
     <div>
-        <p class="auteur"> <span class="auteurTitle"> Auteur :</span> {{crimeScene.name}} </p>
+        <p class ="auteur"> <span class="auteurTitle"> Auteur :</span> {{crimeScene.name}} </p>
     </div>
 
-    <div>
+    <div class = "datetime">
         <time class="date"> <span class="dateTitle"> Date :</span> {{crimeScene.date}} </time>
     </div>
-    <a class="editButton" href="/crimes/edit?id={{ crimeScene.id }}"> Edit </a>
-
+    <div class = "editbuttondiv"> 
+        <a class="editButton" href="/crimes/edit?id={{ crimeScene.id }}"> Edit </a>
+    </div>
 </section>

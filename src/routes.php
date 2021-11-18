@@ -12,5 +12,7 @@ return [
     'crimes/show' => ['CrimeSceneController', 'show', ['id']],
     'crimes/add' => ['CrimeSceneController', 'add',],
     'crimes/search' => ['CrimeSceneController', 'search', ['q']],
+    'crimes/register' => ['CrimeSceneController', 'listallcrimes',],
+
 
 ];

@@ -529,19 +529,18 @@ input::placeholder {
                 height: 35vh;
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 margin: auto;
                 border: 1px solid black;
         }
         /* *************** SECTION CREATE CRIME *************** */
 
         .createCrime {
+                background-color: var(--secondary-color);
                 height: 20vh;
-                border: 1px solid var(--secondary-color);
-                background-color: transparent;
+                justify-content: center;
                 border-radius: 10px;
-                width: 40%;
                 color: var(--dark);
-                align-items: center;
         }
 
         .createCrime a {
@@ -551,9 +550,7 @@ input::placeholder {
         /* *************** SECTION LIST TITLE *************** */
 
         .listCrimes {
-                background-color: transparent;
-                background-color: none;
-                width: 40%;
+                background-color: var(--secondary-color);
                 height: 30vh;
                 border: 1px solid var(--secondary-color);
                 border-radius: 10px;

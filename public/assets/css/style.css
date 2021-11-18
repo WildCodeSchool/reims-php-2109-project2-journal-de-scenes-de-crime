@@ -133,6 +133,7 @@ input::placeholder {
         border-bottom: 1px solid var(--dark);
         margin-bottom: 1.7rem;
         margin-left: 2rem;
+        justify-content: space-around;
 
 }
 
@@ -691,16 +692,12 @@ input::placeholder {
         }
         /* *************** NAVBAR *************** */
         #searchQueryInput{
-                width: 50rem;
+                width: 800px;
         }
         .nav-title{
                 margin-right: unset;
         }
         /* *************** SECTION LIST TITLE *************** */
-        .createCrime{
-                margin-top: 7rem;
-                margin-right: 0;
-        }
         .listCrimes{
                 background:no-repeat url(../images/Carnet-anneaux.svg);
                 height: 540px;
@@ -714,25 +711,25 @@ input::placeholder {
                 max-width: 80%;
         }
         /* *************** SECTION CREATE CRIME *************** */
-        .formcrime{
-                background:no-repeat url(../images/Carnet-anneaux.svg);
-                padding-top: 10rem;
-                width: 100vw;
-                margin-top: 1rem;
+        .ringImg{
+                width: 100%;
         }
-        .createCrime a{
-                margin-bottom: 10rem;
+        .formcrime{
+                width: 100%;
+                margin-top: 1rem;
         }
         .createCrime h1{
                 transform: translateY(-80px);
         }
+        .createCrime .button{
+               height : 30%;
+               display: initial;
+        }
         .displayCrimeScene{
-                padding-top: 10rem;
-                background: no-repeat url(../images/Carnet-anneaux.svg);
-                margin-left: 2rem;
-                padding-left: 8rem;
-                margin-right: 2rem;
-                padding-right: 8rem;
+                display: flex;
+                align-content: stretch;
+                justify-content: space-evenly;
+                align-items: center;
         }
         .crimeSceneTitle{
                 margin-bottom: 3rem;
@@ -741,27 +738,29 @@ input::placeholder {
                 font-size: 40px;
         }
         .dateTitle{
-                float: right;
-                font-size: large;
+                float: none;
+                text-decoration: none;
         }
         .adresse{
                 font-size: 30px;
         }
         .adresseTitle{
-                float: left;
+                float: none;
+                text-decoration: none;
         }
         .victime{
                 font-size: 30px;
         }
         .victimeTitle{
-                float: left;
+                float: none;
+                text-decoration: none;
         }
         .auteur{
                 font-size: 30px;
         }
         .auteurTitle{
-                font-size: large;
-                float: right;
+                float: none;
+                text-decoration: none;
         }
         .date{
                 font-size: 30px;

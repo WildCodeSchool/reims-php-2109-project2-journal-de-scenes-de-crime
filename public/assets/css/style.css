@@ -41,15 +41,12 @@ body {
         background-color: var(--main-color);
         display: flex;
         flex-direction: column;
-        justify-content: center;
 }
 
 h1 {
-        font-family: var(--h1-font);
-        font-size: var(--h1-size);   
         text-align: center;
-        margin-top: 1rem;
         margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
 }
 
 h2 {
@@ -62,17 +59,22 @@ h2 {
 .header {
         color: var(--secondary-color);
         font-family: var(--h1-font);
-        height: 56vh;
+        height: 50vh;
+}
+
+.nav-title {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 }
 
 .body {
-       height: 44vh;
+       height: 50vh;
 }
 
 .logo {
-        font-family: var(--h1-font);
-        width: 50%;
-        margin-top: 0.7rem;
+        width: 40%;
 }
 
 .logocontainer{
@@ -93,12 +95,14 @@ h2 {
 .searchBar {
         width: 80%;
         margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
 }
 input::placeholder {
-        color: #FFF;
+        color: var(--third-color);
 }
 
 #searchQueryInput {
@@ -120,13 +124,10 @@ input::placeholder {
         background: none;
         border: none;
         outline: none;
-        padding-bottom: 55px;
-}
-      
-#searchQuerySubmit:hover {
+        padding-bottom: 10px;
         cursor: pointer;
 }
-
+      
 #searchBar {
         width: 50%;
         margin: auto;
@@ -159,77 +160,47 @@ input::placeholder {
 }
 /* *************** SECTION CREATE LIST *************** */
 .create-list {
+        height: 70%;
         display: flex;
         flex-direction: column;
         margin: auto;
-        align-content: space-between;
+        justify-content: space-around;
+}
+
+.img-phone {
+        width: 15%;
 }
 /* *************** SECTION CREATE CRIME *************** */
-
-.createCrime {
-        background-color: var(--secondary-color);
-        margin: auto;
-        padding: 0.5rem;
-        width: 85%;
-        border-radius: 100px;
-        margin-bottom: 1rem;
-}
-.createCrime h1 {
-        font-size: 2rem;
-}
-
-/* .createCrime .button{
-        text-align: center;
-        border-radius: 40px;
-        margin: 1rem;
-        width: 40%;
-} */
-
-.createCrime a{
-        font-size: var(--h2-size);
-        text-decoration: none;
-        font-family: AmericanTypewriter;
-}
-
 /* *************** SECTION LIST TITLE *************** */
 
-.listCrimes {
+.listCrimes, .createCrime {
+        display: flex;
+        justify-content: center;
         background-color: var(--secondary-color);
         margin: auto;
-        width: 85%;
-        border-radius: 100px;
+        width: 65%;
+        border-radius: 30px;
         padding: 0.5rem;
-        font-family: AmericanTypewriter;
         font-size: 1rem;
         color: var(--secondary-color);
 }
 
-.listCrimes h1 {
+.listCrimes h1, .createCrime h1 {
         font-size: 2rem;
         color: var(--main-color);
 }
-.listCrimes li {
-        list-style-type: none;
-        color: var(--secondary-color);
-        text-align: center;
-}
 
-.listCrimes a {
+.listCrimes a, .createCrime a {
         text-decoration: none;
         font-size: var(--text-size);
-        color: var(--dark);
         text-align: center;
-}
-
- .listCrimes a:hover{
-        color: #fffae8;
-}
-
-.img-ipad {
-        display: none;
 }
 
 /* *************** SECTION FORM CREATE CRIME *************** */
+
+.title-edit {
+        font-size: 1.5rem;
+}
 
 .formcrime {
         display: flex;
@@ -242,6 +213,7 @@ input::placeholder {
 }
 .ringImg{
         width: 100%;
+        margin: auto;
 }
 
 .formcrime label{
@@ -277,6 +249,11 @@ input::placeholder {
         border-bottom: 5px solid #A5593C;
 } 
 
+.dateForm{
+        display: block;
+        text-align: left;
+}
+
 .submit-form {
         margin: 0.8rem 0rem 0.8rem 0rem;
         color: var(--third-color);
@@ -290,12 +267,22 @@ input::placeholder {
 }
 
 .link-home {
+        margin: auto;
         text-decoration: none;
-        color: var(--secondary-color);
+        background: #c2bcaa;
+        color: rgb(0, 0, 0);
+        border-radius: 4px;
+        padding: 5px;
+        width: 60%;
+        margin-top: 5px;;
+        text-align: center;
+        font-family: AmericanTypewriter;
 }
+
 /* *************** SECTION CRIME REGISTER *************** */
-.registerTitle {
-       font-size: var(--h2-size); 
+
+.registreContainer .ringImg {
+        width: 85%;
 }
 .crime_register {
         font-size: var(--h4-size);
@@ -307,13 +294,20 @@ input::placeholder {
 }
 .crime_register li{
         list-style: none;
+        padding-bottom: 0.6rem;
 }
 .crime_register a{
         text-decoration:none;
-        color: #A5593C;
+        color: var(--secondary-color);
 }
 
+
+
 /* *************** SECTION RESULT CRIME *************** */
+.result-container .ringImg{
+        width: 85%;
+}
+
 .crimesResults {
         font-size: var(--h4-size);
         font-family: AmericanTypewriter;
@@ -324,13 +318,11 @@ input::placeholder {
 }
 .crimesResults li{
         list-style: none;
+        padding-bottom: 0.6rem;
 }
 .crimesResults a{
         text-decoration:none;
         color: #A5593C;
-}
-.crimesResults h1{
-        font-size : var(--h2-size);
 }
 /* *************** SECTION CRIME SCENE *************** */
 .displayCrimeScene{
@@ -340,8 +332,6 @@ input::placeholder {
 }
 .crimeSceneTitle{
         color: var(--secondary-color);
-        font-family: var(--h1-font);
-        font-size: var(--h2-size);
         text-align: center;
         margin: 1rem; 
 }
@@ -363,47 +353,36 @@ input::placeholder {
         font-size: large;
         float: right;
 }
-.adresseTitle{
-        text-decoration: underline;
-        font-size: large;
-}
-.adresse{
+
+.adresse, .victime{
+        text-align: center;
         color: var(--dark);
         font-family: var(--h1-font);
         font-size: x-large;
-        float: left;
 }
-.victimeTitle{
+.victimeTitle, .adresseTitle{
+        text-align: center;
         text-decoration: underline;
         font-size: large;
 } 
-.victime{
-        color: var(--dark);
-        font-family: var(--h1-font);
-        font-size: x-large;
-        float: left;
-}
+
 .descritioncontainer{
         display: flex;
         flex-direction: column;
 }
 .descrition{
         color: var(--dark);
-        font-family: var(--h1-font);
         font-size: x-large;
         text-align: center;
-        margin: 1rem;
+        margin: 2rem;
 }
 .editbuttondiv{
         padding: 3rem;
 }
 .editButton{
         margin: auto;
-        width: 25%;
         text-decoration: none;
-        text-align: center;
         background: #c2bcaa;
-        border: none;
         color: rgb(0, 0, 0);
         border-radius: 10px;
         padding: 0.5rem;
@@ -411,17 +390,13 @@ input::placeholder {
 
 }
 .homeButton{
+        margin: auto;
         text-decoration: none;
-        text-align: center;
-        background: #c7c0a8;
-        border: none;
+        background: #c2bcaa;
         color: rgb(0, 0, 0);
-        border-radius: 40px;
-        padding: 1rem;
+        border-radius: 10px;
+        padding: 0.5rem;
         font-family: AmericanTypewriter;
-        font-size: 1rem;
-        width: 40%;
-        margin-top: 2rem;
         }
 /* *************** SECTION COMMENTS FORM *************** */
 .inputComment {
@@ -473,7 +448,16 @@ input::placeholder {
 .inputComment input:focus {
         border-bottom: 5px solid #A5593C;
 } 
+
+.titre-commentaire {
+        font-size: 1.5rem;
+        border-top: 1px solid black;
+        padding-top: 1rem;
+        color: var(--secondary-color);
+}
+
 .submitComment {
+        cursor: pointer;
         margin: 0.8rem 0rem 0.8rem 0rem;
         color: var(--third-color);
         background-color: var(--secondary-color);
@@ -555,10 +539,6 @@ input::placeholder {
 @media (min-width: 576px) {
 
         /* *************** HEADER *************** */
-
-        .logocontainer {
-                margin: 3rem;
-        }
         .logo {
                 width: 25%;
                 margin-top: 0.7rem;
@@ -602,6 +582,11 @@ input::placeholder {
         .createCrime a {
                 color: var(--secondary-color);
         }
+
+        .formcrime .ringImg {
+                width: 100%;
+        }
+
         .formcrime label{
                 font-size: 30px;
         }

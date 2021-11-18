@@ -4,13 +4,13 @@
     {% include 'Components/_header.html.twig' %}
     <div class="body">
         {% include 'Components/_hashtag.html.twig' %}
-        <section class="crimesResults">
+        <section class="result-container">
             <h1>Résultats</h1>
             <div class="ringImg">
             <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note">
         </div>
 
-            <ul id="crimeScene">
+            <ul id="crimeScene" class="crimesResults">
                 {% for title in titles %}
                     <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
                 {% endfor %}

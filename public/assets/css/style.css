@@ -243,6 +243,9 @@ input::placeholder {
         width: 75vw;
         border-radius: 20px;
 }
+.ringImg{
+        width: 150%;
+}
 
 .formcrime label{
         font-size: var(--text-size);

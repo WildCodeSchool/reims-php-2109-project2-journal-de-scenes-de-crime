@@ -4,8 +4,11 @@
         {% include 'Components/_header.html.twig' %}
     <div class="body">
         {% include 'Components/_hashtag.html.twig' %}
-
-        <ul id="crime_scene">
+        <h1 class="registerTitle"> Registre des crimes </h1>
+        <div class="ringImg">
+            <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note">
+        </div>
+        <ul class="crime_register" "id="crime_scene">
             {% for title in titles %}
             <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
             {% endfor %}

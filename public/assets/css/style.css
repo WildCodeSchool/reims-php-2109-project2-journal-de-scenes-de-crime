@@ -530,7 +530,7 @@ input::placeholder {
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
-                border: 1px solid black;
+                
         }
         /* *************** SECTION CREATE CRIME *************** */
 
@@ -560,13 +560,14 @@ input::placeholder {
         }
 
         .listCrimes h1 {
-                color: var(--dark);
+                color: var(--h1-font);
         }
 
         .listCrimes a {
                 color: var(--secondary-color);
         }
 
+        
     }
     
     /* Medium devices (tablets, 768px and up) */

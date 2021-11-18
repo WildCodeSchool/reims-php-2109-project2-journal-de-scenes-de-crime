@@ -5,7 +5,7 @@
     <div class="body">
         {% include 'Components/_hashtag.html.twig' %}
         <section class="crimesResults">
-            <h1>Résults</h1>
+            <h1>Résultats</h1>
             <ul id="crimeScene">
                 {% for title in titles %}
                     <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>

@@ -173,7 +173,6 @@ input::placeholder {
 }
 .createCrime h1 {
         font-size: 2rem;
-        color: var(--main-color);
 }
 
 .createCrime .button{
@@ -224,7 +223,7 @@ input::placeholder {
         text-align: center;
 }
 
-.listCrimes a:hover{
+ .listCrimes a:hover{
         color: #fffae8;
 }
 
@@ -585,7 +584,12 @@ input::placeholder {
         .createCrime a {
                 color: var(--secondary-color);
         }
-
+        .formcrime label{
+                font-size: 30px;
+        }
+        .formcrime input{
+                font-size: 30px;
+        }
         /* *************** SECTION LIST TITLE *************** */
 
         .listCrimes {
@@ -595,14 +599,11 @@ input::placeholder {
                 border: 1px solid var(--secondary-color);
                 border-radius: 10px;
                 margin-top: 0;
-
         }
 
         .listCrimes a {
                 color: var(--secondary-color);
         }
-
-        
     }
     
     /* Medium devices (tablets, 768px and up) */
@@ -758,6 +759,9 @@ input::placeholder {
     
     @media (min-width: 1200px) {
         /* *************** HEADER *************** */
+        .header{
+                height: auto;
+        }
         .title{
                 font-size: 4em;
                 margin-bottom: 1rem;
@@ -769,7 +773,14 @@ input::placeholder {
         .logo{
                 margin-left: 3rem
         }
+        /* *************** HASTAG *************** */
+        .listHashtag ul {
+                display: flex;
+                justify-content:space-around;
+                font-size: 30px;
+        }
         /* *************** NAVBAR *************** */
+        
         #searchQueryInput{
                 width: 800px;
         }
@@ -791,9 +802,10 @@ input::placeholder {
         /* *************** SECTION CREATE CRIME *************** */
         .createCrime{
                 transform: none;
+                margin-right: auto;
+                background-size: 85%;
         }
         .createCrime h1{
-                transform:none;
                 font-size: 50px;
         }
         .ringImg{
@@ -850,15 +862,18 @@ input::placeholder {
         .editbuttondiv{
                 margin: 5rem;
         }
-        /* *************** SECTION HASTAG *************** */
+        /* *************** SECTION REGISTRE *************** */
+        .main{
+                display: block;
+        }
+        .crime_register{
+                font-size: 30px;
+                margin: 1rem;
+        }
+        .crime_register li {
+                padding: 1rem;
+        }
+        .registerTitle{
+                margin-top: 2rem;
+        }
 }
-    /* XX-Large devices (larger desktops, 1400px and up) */
-    
-    @media (min-width: 1400px) {
-         /* *************** HEADER *************** */
-        /* *************** NAVBAR *************** */
-        /* *************** SECTION HASTAG *************** */
-        /* *************** SECTION LIST TITLE *************** */
-
-        /* *************** SECTION CREATE CRIME *************** */
-    }

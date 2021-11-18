@@ -315,21 +315,24 @@ input::placeholder {
 }
 
 /* *************** SECTION RESULT CRIME *************** */
-/* .crimesResults {
+.crimesResults {
         font-size: var(--h4-size);
         font-family: AmericanTypewriter;
         display: flex;
         flex-direction: column;
         align-items: center;
-        list-style-type: none;
-}
-
-.crimesResults li {
         list-style: none;
-        text-decoration: none;
+}
+.crimesResults li{
+        list-style: none;
+}
+.crimesResults a{
+        text-decoration:none;
         color: #A5593C;
-} */
-
+}
+.crimesResults h1{
+        font-size : var(--h2-size);
+}
 /* *************** SECTION CRIME SCENE *************** */
 .displayCrimeScene{
         display: flex;

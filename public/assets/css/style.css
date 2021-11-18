@@ -136,9 +136,8 @@ input::placeholder {
 .listHashtag {
         border-top: 1px solid var(--dark);
         border-bottom: 1px solid var(--dark);
-        margin-bottom: 1rem;
+        margin: 1rem;
         margin-left: 2rem;
-        justify-content: space-around;
         margin-right: 2rem;
 }
 
@@ -158,35 +157,38 @@ input::placeholder {
         font-family:var(--text-font);
         font-size: var(--text-size)
 }
-
+/* *************** SECTION CREATE LIST *************** */
+.create-list {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-content: space-between;
+}
 /* *************** SECTION CREATE CRIME *************** */
 
 .createCrime {
         background-color: var(--secondary-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin: auto;
         padding: 0.5rem;
         width: 85%;
         border-radius: 100px;
+        margin-bottom: 1rem;
 }
 .createCrime h1 {
         font-size: 2rem;
         color: var(--main-color);
 }
 
-.createCrime .button{
+/* .createCrime .button{
         text-align: center;
         border-radius: 40px;
         margin: 1rem;
         width: 40%;
-}
+} */
 
 .createCrime a{
         font-size: var(--h2-size);
         text-decoration: none;
-        color: #ffffff;
         font-family: AmericanTypewriter;
 }
 
@@ -194,14 +196,10 @@ input::placeholder {
 
 .listCrimes {
         background-color: var(--secondary-color);
-        margin: 1rem;
+        margin: auto;
         width: 85%;
         border-radius: 100px;
-        margin: 1rem;
         padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         font-family: AmericanTypewriter;
         font-size: 1rem;
         color: var(--secondary-color);
@@ -209,7 +207,7 @@ input::placeholder {
 
 .listCrimes h1 {
         font-size: 2rem;
-        color: var(--third-color);
+        color: var(--main-color);
 }
 .listCrimes li {
         list-style-type: none;
@@ -546,9 +544,17 @@ input::placeholder {
 @media (min-width: 576px) {
 
         /* *************** HEADER *************** */
-        .titleLayout {
-                display: block;
+
+        .logocontainer {
+                margin: 3rem;
         }
+        .logo {
+                width: 25%;
+                margin-top: 0.7rem;
+        }
+        /* .titleLayout {
+                display: block;
+        } */
 
         .img-ipad {
                 display: initial;

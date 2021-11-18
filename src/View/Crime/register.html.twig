@@ -2,17 +2,18 @@
 
 {% block content %}
         {% include 'Components/_header.html.twig' %}
-    <div class="body">
+    <div class="main">
         {% include 'Components/_hashtag.html.twig' %}
+        <section class="registreContainer">
         <h1 class="registerTitle"> Registre des crimes </h1>
         <div class="ringImg">
             <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note">
         </div>
         <ul class="crime_register" "id="crime_scene">
             {% for title in titles %}
-            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }}</a></li>
             {% endfor %}
         </ul>
+        </section>
     </div>
-    
 {% endblock %}

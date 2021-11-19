@@ -90,6 +90,9 @@ h2 {
         height: 10vh;
 }
 
+.title {
+        font-size: 3rem;
+}
 /* *************** SEARCHBAR *************** */
       
 .searchBar {
@@ -349,14 +352,18 @@ input::placeholder {
 .auteurTitle{
         text-decoration: underline;
 }
+
 .auteur{
         color: var(--dark);
         font-family: var(--h1-font);
         font-size: large;
-        float: right;
+        text-align: center;
 }
 .dateTitle{
         text-decoration: underline;
+        display: block;
+        text-align: center;
+        margin: 0.5rem;
 }
 .date{
         color: var(--dark);
@@ -369,13 +376,17 @@ input::placeholder {
         text-align: center;
         color: var(--dark);
         font-family: var(--h1-font);
-        font-size: x-large;
+        font-size: 1.1rem;
 }
 .victimeTitle, .adresseTitle{
         text-align: center;
         text-decoration: underline;
         font-size: large;
 } 
+p span{
+        display: block;
+        margin: 0.5rem;
+}
 
 .descritioncontainer{
         display: flex;
@@ -383,7 +394,7 @@ input::placeholder {
 }
 .descrition{
         color: var(--dark);
-        font-size: x-large;
+        font-size: 1.1rem;
         text-align: center;
         margin: 2rem;
 }

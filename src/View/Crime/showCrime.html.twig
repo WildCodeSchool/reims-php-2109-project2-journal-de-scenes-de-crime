@@ -1,9 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% include 'Components/_header.html.twig' %}
-    <div class="hashtagdesktop">{% include 'Components/_hashtag.html.twig' %}</div>
-    {% include 'Components/_displayCrimeScene.html.twig' %}
-    {% include 'Components/_comments.html.twig' %}
-    {% include 'Components/_inputComment.html.twig' %}
+    <div class="main">
+        {% include 'Components/_header.html.twig' %}
+        <div class="hashtagdesktop">{% include 'Components/_hashtag.html.twig' %}</div>
+        {% include 'Components/_displayCrimeScene.html.twig' %}
+        <div class="comment-size">
+            {% include 'Components/_comments.html.twig' %}
+            {% include 'Components/_inputComment.html.twig' %}
+        </div>
+    </div>
 {% endblock %}

@@ -11,7 +11,10 @@ class CrimeSceneController extends AbstractController
 {
     public function index(): string
     {
-        return $this->twig->render('Crime/index.html.twig');
+        $crimeSceneManager = new CrimeSceneManager();
+        $titles = $crimeSceneManager->selectAll();
+
+        return $this->twig->render('Crime/index.html.twig', ['titles' => $titles]);
     }
 
     public function add(): string

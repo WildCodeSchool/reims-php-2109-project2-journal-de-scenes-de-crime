@@ -1,25 +1,36 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-        {% include 'Components/_header.html.twig' %}
-    <div class="body">
-        <div class="listhashtaghome">
-            {% include 'Components/_hashtag.html.twig' %}
-        </div>
-        <div class="create-list">
-            <section class="createCrime">
-                <a href="/crimes/add">
-                    <h1>Créez</h1>
-                </a>
-            </section>
+    <div class="main">
+            {% include 'Components/_header.html.twig' %}
+        <div class="body">
+            <div class="listhashtaghome">
+                {% include 'Components/_hashtag.html.twig' %}
+            </div>
+            <div class="create-list">
+                <section class="createCrime">
+                    <a href="/crimes/add">
+                        <img class="img-ipad" src="assets/images/Plume-light.svg" alt="Une main tenant une plume">
+                        <h1>Créer</h1>
+                    </a>
+                    <img class="img-phone" src="assets/images/Plume-mobile-light.svg" alt="Une plume">
+                </section>
 
-            <section class="listCrimes">
-                <a href="/crimes/register">
-                    <h1>Registre</h1>
-                </a>
-            </section>
-        </div>
+                <section class="listCrimes">
+                    <a href="/crimes/register">
+                        <img class="img-ipad" src="assets/images/ABC-light.svg" alt="Illustration A B C">
+                        <h1>Registre</h1>
+                        <ul id="crimeScene" class="crimesResults">
+                            {% for title in titles %}
+                                <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }} </a></li>
+                            {% endfor %}
+                        </ul>
+                    </a>
+                    <img class="img-phone" src="assets/images/Register-mobile-light.svg" alt="Illustration de A à Z">
+                </section>
+            </div>
 
+        </div>
     </div>
 
 {% endblock %}

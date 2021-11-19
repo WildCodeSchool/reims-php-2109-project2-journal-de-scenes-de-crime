@@ -1,8 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% include 'Components/_header.html.twig' %}
-    {% include 'Components/_hashtag.html.twig' %}
-    {% include 'Components/_formCrime.html.twig' %}
+    <div class="main">
+        {% include 'Components/_header.html.twig' %}
+        <div>
+            {% include 'Components/_hashtag.html.twig' %}
+        </div>
+        {% include 'Components/_formCrime.html.twig' %}
+    </div>
 {% endblock %}
 

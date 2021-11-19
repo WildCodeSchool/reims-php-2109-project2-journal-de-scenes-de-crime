@@ -200,6 +200,10 @@ input::placeholder {
         text-align: center;
 }
 
+.listCrimes .crimesResults {
+        display: none;
+}
+
 /* *************** SECTION FORM CREATE CRIME *************** */
 
 .title-edit {
@@ -250,7 +254,7 @@ input::placeholder {
 }
 
 .formcrime input:focus {
-        border-bottom: 5px solid #A5593C;
+        border-bottom: 5px solid var(--secondary-color);
 } 
 
 .dateForm{
@@ -312,6 +316,8 @@ input::placeholder {
         width: 85%;
 }
 
+
+
 .crimesResults {
         font-size: var(--h4-size);
         font-family: AmericanTypewriter;
@@ -326,8 +332,9 @@ input::placeholder {
 }
 .crimesResults a{
         text-decoration:none;
-        color: #A5593C;
+        color: var(--secondary-color);
 }
+
 /* *************** SECTION CRIME SCENE *************** */
 .displayCrimeScene{
         display: flex;
@@ -666,7 +673,7 @@ input::placeholder {
         /* *************** SECTION HASTAG *************** */
         .body {
                 display: flex;
-                margin-top: 3rem;
+                margin-top: 1.5rem;
         }
 
         .listHashtag {
@@ -681,6 +688,10 @@ input::placeholder {
                 align-content: space-around;
         }
         
+        .list-hashtag-create {
+                display: flex;
+                justify-content: center;
+        }
         /* JOIN CREATE AND LIST */
 
         .create-list {
@@ -703,16 +714,22 @@ input::placeholder {
                 background: center / contain no-repeat url(../images/Carnetcreate-desk.svg);
         }
 
-        .createCrime h1{
+        .createCrime h1, .listCrimes h1{
                 color: unset;
                 font-family: var(--h1-font);
                 font-size: 2.5rem;
         }
 
         /* *************** SECTION LIST TITLE *************** */
+
+        .listCrimes .crimesResults {
+                display: unset;
+                text-align: center;
+        }
+
         .listCrimes {
                 display: flex;
-                justify-content: start;
+                justify-content: center;
                 width: 40%;
                 min-width: 320px;
                 height: 100%;
@@ -720,13 +737,40 @@ input::placeholder {
                 background: center / contain no-repeat url(../images/Carnetcreate.svg);
                 
         }
+       
+        
 
-        .listCrimes h1 {
-                color: unset;
-                padding-top: 2rem;
-                font-size: 2.5rem;
-                font-family: var(--h1-font);
+        /* *************** SECTION FORM CREATE CRIME *************** */
+        .formcrime {
+                width: 70%;
         }
+        .formcrime input {
+                width: 50vw;
+        }
+
+        .formcrime textarea {
+                width: 50vw;
+        }
+
+        /* *************** SECTION CRIME REGISTER *************** */
+
+        .registreContainer .ringImg {
+                width: 70%;
+                margin: auto;
+        }
+
+        /* *************** SECTION RESULT CRIME *************** */
+
+        .result-container {
+                margin: auto;
+                margin-top: 0;
+                width: 70%;
+        }
+
+        #crimeScene .crimesResults {
+                display: unset;
+        }
+ 
     }
 
     /* X-Large devices (large desktops, 1200px and up) */

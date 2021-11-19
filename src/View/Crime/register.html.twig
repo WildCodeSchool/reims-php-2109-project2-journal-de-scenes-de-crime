@@ -1,20 +1,21 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
-        {% include 'Components/_header.html.twig' %}
     <div class="main">
-        {% include 'Components/_hashtag.html.twig' %}
-        <section class="registreContainer">
-        <h1 class="registerTitle"> Registre des crimes </h1>
-        <div class="ringImg">
-            <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note">
-        </div>
+        {% include 'Components/_header.html.twig' %}
+        <div class="main">
+            {% include 'Components/_hashtag.html.twig' %}
+            <section class="registreContainer">
+            <h1 class="registerTitle"> Registre des crimes </h1>
+            <div class="ringImg">
+                <img src="../assets/images/Carnet-anneaux.svg" alt="anneaux d'un carnet de note">
+            </div>
 
-        <ul class="crime_register" id="crime_scene">
-            {% for title in titles %}
-            <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }}</a></li>
-            {% endfor %}
-        </ul>
-        </section>
+            <ul class="crime_register" id="crime_scene">
+                {% for title in titles %}
+                <li> <a href="/crimes/show?id={{ title.id }}">{{ title.title }}</a></li>
+                {% endfor %}
+            </ul>
+            </section>
+        </div>
     </div>
 {% endblock %}
